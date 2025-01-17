@@ -1,0 +1,147 @@
+\section{Analysis}
+    \subsection{Event selection}
+        The dataset used is LHC22o apass7. The collision points of proton-proton interactions are measured by the FIT detectors. As part of the event selection, the Z-posision of the collision point, referred to as VtxZ, is selected to satisfy the condition |VtxZ| < 10 cm. This value corresponds to the acceptance of the ITS. The number of events obtained with this cut is $5.5\times10^9$.
+    
+    \subsection{Single muon selection}
+        The cuts applied to the obtained muons are as follows:
+        \begin{itemize}{}
+            \item -3.6 <$\eta$ < -2.5
+            \item 17.5 cm < RatAbsorberEnd < 89.5 cm
+            \item pDCA < 6$\sigma$
+            \item MFT-MCH matching $\chi^2$ < 40
+        \end{itemize}
+        The $\eta$ cut is applied to match the acceptance of the forward detector. RatAbsorberEnd represents the distance from the center of the hadron absorber, located in front of the MCH, and is also a cut value reflecting the presence of material. pDCA is the product of momentum and DCA, and this cut value is applied to remove muons originating from beam-gas background. Finally, the MFT-MCH matching $\chi^2$ is obtained from a fit using the detected points when matching the MFT tracks to the MCH tracks. The values used in this study were optimized to maximize the statistical accuracy of the yields for omega and phi mesons, as discussed later.
+    \subsection{MFT-MCH matching fake match removal analysis}
+        The matching of the MFT track, located in front of the hadron absorber, with the MCH track, located behind it, is crucial for ensuring the quality of physical quantities such as \( p_t \) and \(\eta\) for single muons. In this study, cuts were applied to MFT-MCH-MID tracks, which had already been reconstructed using three detectors, to identify and remove incorrectly matched tracks between the MFT and MCH within the MFT-MCH-MID tracks.
+        The dataset used was LHC24b1, which is Monte Carlo data for minimum bias (MB) events. 
+        \begin{figure}
+            
+        \end{figure}
+        As shown in the histograms below, reconstructed tracks in MFT-MCH-MID include tracks outside the acceptance range. These out-of-acceptance tracks are one of the factors contributing to fake matches. To eliminate such tracks, a cut on \(\Delta \eta\) was devised as described below.
+            \begin{eqnarray}
+                \Delta \eta = \rm{MFT\ Track\ } \eta - \rm{MCH\ Track\ } \eta  
+            \end{eqnarray}
+    
+    \subsection{Dimuon analysis}
+        \subsubsection{Combinatorial Background subtraction}
+            \label{Analysis:Dimuon Analysis:Combinatorial BG subtraction}
+            Muons detected by the detector cannot, in principle, be distinguished by their parent particles. Therefore, when forming muon pairs, all \(\mu^+\) and \(\mu^-\) within each collision event are paired to reconstruct the mass. To analyze the mass distribution of correlated muon pairs, the uncorrelated mass distribution is estimated later and subtracted, leaving only the mass distribution of correlated muon pairs.
+
+            In this study, the Like Sign Method was used. The Like Sign Method estimates the uncorrelated background by reconstructing the mass of muon pairs with the same sign (\(\mu^+\mu^+\) or \(\mu^-\mu^-\)) obtained in each collision event. The calculation formula is as follows: 
+            \begin{eqnarray}
+                \dv{N_{sig}}{m} &=& \dv{N_{same}^{+-}}{m} -2R\sqrt{\dv{N_{same}^{++}}{m} \dv{N_{same}^{--}}{m}}\\
+                2R&=&\frac{\dv{N_{mix}^{+-}}{m}}{\sqrt{\dv{N_{mix}^{++}}{m} \dv{N_{mix}^{--}}{m}}} 
+            \end{eqnarray}
+
+            \begin{figure}[htbp]
+                \centering
+                \begin{minipage}{0.45\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{fig/CB_pt_1to2.pdf}
+                    \caption{1 < $p_{T}$ < 2}
+                    \label{fig:CB_1to2}
+                \end{minipage}
+                \hfill
+                \begin{minipage}{0.45\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{fig/CB_pt_2to3.pdf}
+                    \caption{2 < $p_{T}$ < 3}
+                    \label{fig:CB_2to3}
+                \end{minipage}
+                \\
+                \vspace{1em}
+                \begin{minipage}{0.45\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{fig/CB_pt_3to4.pdf}
+                    \caption{3 < $p_{T}$ < 4}
+                    \label{fig:CB_3to4}
+                \end{minipage}
+                \hfill
+                \begin{minipage}{0.45\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{fig/CB_pt_4to5.pdf}
+                    \caption{4 < $p_{T}$ < 5}
+                    \label{fig:CB_4to5}
+                \end{minipage}
+                \\
+                \vspace{1em}
+                \begin{minipage}{0.45\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{fig/CB_pt_5to6.pdf}
+                    \caption{5 < $p_{T}$ < 6}
+                    \label{fig:CB_5to6}
+                \end{minipage}
+                \hfill
+                \begin{minipage}{0.45\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{fig/CB_pt_6to10.pdf}
+                    \caption{6 < $p_{T}$ < 10}
+                    \label{fig:CB_6to10}
+                \end{minipage}
+                \label{fig:CB_pt_separation}
+            \end{figure}
+
+        \subsubsection{$\omega,\phi$ peak fit}
+            From the mass distribution of correlated muon pairs obtained from \ref{Analysis:Dimuon Analysis:Combinatorial BG subtraction}, the distribution of $\omega,\phi->\mu\mu$ is extracted. The $\omega,\phi->\mu\mu$ have sharp peak structures, which constitute a peak around 0.7 GeV and a peak around 1.0 GeV in the mass distribution, respectively. In the present analysis, the other distributions are background events, so they were subtracted from the continuous component of the mass distribution by fitting it with an exponential function. The fitting function is as follows.
+            \begin{eqnarray}
+                f(m)=p0*\exp{-p1* m}+p2*\exp{-\frac{(m-p3)^2}{(2p4)^2}}+p5*\exp{-\frac{(m-p6)^2}{(2p7)^2}}
+            \end{eqnarray}
+
+            \begin{figure}[htbp]
+                \centering
+                \begin{minipage}{0.45\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{fig/fit_pt_1to2.pdf}
+                    \caption{1 < $p_{T}$ < 2}
+                    \label{fig:fit_1to2}
+                \end{minipage}
+                \hfill
+                \begin{minipage}{0.45\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{fig/fit_pt_2to3.pdf}
+                    \caption{2 < $p_{T}$ < 3}
+                    \label{fig:fit_2to3}
+                \end{minipage}
+                \\
+                \vspace{1em}
+                \begin{minipage}{0.45\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{fig/fit_pt_3to4.pdf}
+                    \caption{3 < $p_{T}$ < 4}
+                    \label{fig:fit_3to4}
+                \end{minipage}
+                \hfill
+                \begin{minipage}{0.45\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{fig/fit_pt_4to5.pdf}
+                    \caption{4 < $p_{T}$ < 5}
+                    \label{fig:fit_4to5}
+                \end{minipage}
+                \\
+                \vspace{1em}
+                \begin{minipage}{0.45\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{fig/fit_pt_5to6.pdf}
+                    \caption{5 < $p_{T}$ < 6}
+                    \label{fig:fit_5to6}
+                \end{minipage}
+                \hfill
+                \begin{minipage}{0.45\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{fig/fit_pt_6to10.pdf}
+                    \caption{6 < $p_{T}$ < 10}
+                    \label{fig:fit_6to10}
+                \end{minipage}
+                \label{fig:fit_pt_separation}
+            \end{figure}
+
+            \subsubsection{$\omega,\phi$ yield} 
+            \begin{eqnarray}
+            f(m)=p2*\exp{-\frac{(m-p3)^2}{(2p4)^2}}+p5*\exp{-\frac{(m-p6)^2}{(2p7)^2}}
+            \end{eqnarray}
+            \(\dv{N_{sig}}{m}\) represents the number of correlated muons at each mass. \(\dv{N_{same}^{**}}{m}\) is the number of muon pairs with the same sign (** corresponds to the muon's sign) within the same event, while \(\dv{N_{mix}^{**}}{m}\) is the number of muon pairs formed between different events. \(R\) is a correction factor to account for acceptance differences due to the muon's sign.
+
+            The key feature of this method is that it subtracts uncorrelated background events using muons from the same event. As a result, it also removes the mass distribution of particles with weak correlations within each event, such as those arising from flow in heavy-ion collisions. The resulting subtracted distribution is illustrated in the figure below.
+
+        \subsubsection{Matching chi2 optimaization}
+       
