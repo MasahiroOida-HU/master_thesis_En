@@ -8,29 +8,72 @@
 \usepackage{combinedgraphics}
 \usepackage{epstopdf}
 \usepackage{bm}
-\usepackage[margin=20truemm]{geometry}
-\title{Measurement of $\omega$ and $\phi$ meson production via dimuons at forward rapidity in $pp$ collisions at $\sqrt{s}=13.6$ TeV with ALICE}
-\date{}
+\usepackage[margin=25truemm]{geometry}
+\usepackage{fancyhdr} % ヘッダー・フッターのカスタマイズ用パッケージ
+\usepackage{titlesec} % セクションのスタイル変更用（オプション）
+\usepackage{caption}
+
+
+% ヘッダーの設定
+\pagestyle{fancy}
+\fancyhf{} % デフォルトのヘッダー・フッターをクリア
+\fancyhead[L]{\large \thesection\quad\leftmark} % 左上にセクション番号とセクション名
+\fancyhead[C]{} % ヘッダー中央は空
+\fancyhead[R]{\large \thepage} % 右上にページ番号
+
+% セクション名の追跡を有効化
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+
+% セクションタイトルのカスタマイズ
+\titleformat{\section}
+  {\LARGE\bfseries} % フォントサイズを大きく、太字
+  {\thesection} % セクション番号
+  {1em} % 番号とタイトルの間隔
+  {}
+
+\titleformat{\subsection}
+  {\Large\bfseries} % 少し小さく、斜体と太字
+  {\thesubsection}
+  {1em}
+  {}
+
+\titleformat{\subsubsection}
+  {\large\bfseries} % 通常サイズに近い、太字
+  {\thesubsubsection}
+  {1em}
+  {}
+
+\title{Measurement of $\omega$ and $\phi$ meson production via dimuons at forward rapidity in $pp$ collisions at $\sqrt{s}=13.6$ TeV with ALICE.}
 \author{Masahiro Oida}
+\date{}
 \begin{document}
+  \setlength{\headheight}{18.0pt}
+  \addtolength{\topmargin}{-4.0pt}
+  \setlength{\baselineskip}{1.2\baselineskip}
+
     \maketitle
     \setcounter{tocdepth}{3}
     \tableofcontents
     \newpage
     \setcounter{section}{0}
-
     %はじめに
     \input{0_Abstract.tex}
+
     %第1章
     \input{1_Introduction.tex}
-    %第2章s
+
+    %第2章
     \input{2_Detector.tex}
+
     %第3章
     \input{3_Analysis.tex}
+
     %第4章
     \input{4_Results.tex}
-    \begin{thebibliography}{99}
-        \input{Reference.tex}
-    \end{thebibliography}
 
+    \newpage
+    \begin{thebibliography}{99}
+      \input{Reference.tex}
+    \end{thebibliography}
+   % \input{5_appendix.tex}
 \end{document}

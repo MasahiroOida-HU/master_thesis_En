@@ -1,17 +1,47 @@
+\newpage
+\clearpage
 \section{Detector setup}
-    \subsection{LHC-ALICE}
-    \begin{figure}[htbp]
-        \centering
-        \includegraphics[keepaspectratio, scale=0.2]{fig/ALICE_RUN3_detectors.jpg}
-        \caption{ALICE detectors}
-        \label{ALICE_detectors}
-    \end{figure}
-    \subsection{Barrel detectors}
-    \subsection{Forward detectors}
-    \begin{figure}[htbp]
-        \centering
-        \includegraphics[keepaspectratio, scale=0.7]{fig/muon_detectors.png}
-        \caption{MFT-MCH-MID}
-        \label{muon_detectors}
-    \end{figure}
-    \subsection{Track reconstruction}
+    \subsection{Large Hadron Collider (LHC)}
+        The Large Hadron Collider (LHC) is the world's largest circular accelerator. As shown in Figure \ref{LHC}, the LHC and its major experimental groups are located near Geneva, Switzerland. LHC Run 1 was conducted from 2009 to 2013, and Run 2 took place from 2015 to 2018. The ongoing Run 3 is scheduled to collect physics data from 2022 to the summer of 2026. During the run, most of the periods involve proton-proton collision measurements, with heavy-ion collision measurements conducted for about one month each year. The LHC accelerator hosts four major experimental groups: ATLAS, CMS, LHCb, and ALICE.
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[keepaspectratio, scale=0.2]{fig/2_1_LHC_detecter.png}
+            \caption{LHC}
+            \label{LHC}
+        \end{figure}
+        \subsection{A Large Ion Collider Experiment (ALICE)}
+        The ALICE collaboration is an international collaboration consisting of 168 research institutions from 40 countries and around 2,000 researchers. The ALICE detector system is dedicated to research related to the Quark-Gluon Plasma (QGP) produced in heavy-ion collisions.
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[keepaspectratio, scale=0.2]{fig/2_1_ALICE_RUN3_detectors.jpg}
+            \caption{ALICE detectors}
+            \label{ALICE_detectors}
+        \end{figure}
+        The detectors can be broadly divided into two main groups: the barrel detector group and the forward detector group.
+        The barrel detector group includes detectors such as ITS, TPC, TOF, EMCal, TRD, PHOS/CPV, and HMPID. A magnetic field is applied along the beam axis, bending the motion of charged particles and enabling particle identification, momentum, and energy measurements. The forward detector group is specifically designed for muon measurements and consists of three trackers—MFT, MCH, and MID—and two hadron absorbers. A dipole magnet is placed between MCH, allowing the measurement of muon momentum and sign. Other detectors include ZDC and FIT. The ZDC is placed far forward of the collision point and measures the number of neutrons and protons, determining the centrality of heavy-ion collision events. The FIT detectors are placed both forward and backward and are used for measuring event luminosity and particle multiplicity.
+
+        \subsubsection{MUON Spectrometer}
+            \begin{figure}
+                \centering
+                \includegraphics[keepaspectratio, scale=0.25]{fig/2_2_MUONspectrometer.png}
+                \caption{MUON spectrometer}
+            \end{figure}
+            The MUON spectrometer consists of the Front Absorber, MCH, Iron Wall, and MID, and has an acceptance range of $-4.0 < \eta < -2.5$. It uses the high penetration power of muons to identify them. Various particles generated at the collision point (IP) pass through the Front Absorber. Hadrons and light electrons, which interact strongly, are absorbed by the Front Absorber, while muons, due to their high penetration power, pass through it. The muons that pass through the Front Absorber are detected, and any particles such as $\pi$ mesons that are produced from interactions within the Front Absorber are measured by the MCH. These particles are then absorbed in the Iron Wall, so they are not detected by the MID. Therefore, muon identification (PID) is performed by combining tracks measured in the MCH and MID. The momentum of the muons is measured using a dipole magnet in the MCH, which is set at a magnetic flux density of 3.0T.
+
+        \subsubsection{MFT}
+            \begin{figure}[htbp]
+                \centering
+                \includegraphics[keepaspectratio, scale=0.17]{fig/2_3_MFT.jpg}
+                \caption{MFT}
+                \label{MFT}
+            \end{figure}
+            The MFT is a newly introduced silicon pixel detector in Run 3, installed between $z=0$ and $z=-76.8$ cm (with an acceptance range of $-3.6 < \eta < -2.5$). It consists of 5 layers of disks that detect tracks and reconstruct MFT standalone tracks considering the influence of the L3 magnet, which creates the ALICE central magnetic field. Since the detector is placed in front of the Front Absorber, the tracks measured include not only muons but also various other particles such as $\pi$ mesons and kaons. By combining these tracks with those measured by the backward MUON spectrometer, it is possible to measure the DCA of the muons. The ability to measure DCA enables the separation of c and b quarks based on differences in lifetime. Additionally, the precision of the opening angle of the muon pair is improved, which enhances mass resolution. Furthermore, since the MFT is placed in front of the Front Absorber, it allows for the measurement of lower transverse momentum muons compared to those measured by the MUON spectrometer alone.
+
+        \subsubsection{MFT-MUON Track Matching}\label{MFT-MUON_matching}
+            The tracks measured by the MUON spectrometer and MFT are matched to reconstruct the Global Track. First, the tracks measured by the MUON spectrometer are extrapolated toward the collision point up to the last disk of the MFT, located at $z=76.8$ cm. The extrapolation accounts for multiple scattering and energy loss corrections in the hadron absorber between the MUON spectrometer and MFT. Then, suitable MFT tracks are selected based on both position and direction, and the matching quality is evaluated by comparing the position and slope of the tracks. The best quality MFT track is selected and used to construct the Global Track.
+            \begin{figure}[htbp]
+                \centering
+                \includegraphics[keepaspectratio, scale=0.3]{fig/2_2_3_GlobalTrackReco.png}
+                \caption{Global Track\cite{MFT_TDR}}
+                \label{GlobalTrackReco}
+            \end{figure}
