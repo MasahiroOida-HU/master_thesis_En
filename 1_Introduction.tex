@@ -1,3 +1,4 @@
+
 \section{Introduction}
     \subsection{QCD}
     \label{Intro:QCD}
@@ -38,13 +39,13 @@
     \subsection{Chiral symmetry}
     \label{Intro:Chiral_symmetry}  
         The quark field can be separated into its right-handed and left-handed components. The projection operators for the right-handed and left-handed components are defined as $P_R$ and $P_L$, respectively. Using the $\gamma$ matrices, they are expressed as follows:  
-        \begin{eqnarray}  
+        \begin{eqnarray}
             P_R = \frac{1+\gamma_5}{2}, \quad P_L = \frac{1-\gamma_5}{2} 
-        \end{eqnarray}  
+        \end{eqnarray}
         The following equations hold for these projection operators.
-        \begin{equation}  
+        \begin{equation}
             P_R + P_L = 1, \quad P_R P_L = 0, \quad P_R^2 = P_R, \quad P_L^2 = P_L  
-        \end{equation}  
+        \end{equation}
         
         The right-handed quark field $q_R$ and the left-handed quark field $q_L$ are expressed using the projection operators as follows:  
         \begin{eqnarray}  
@@ -123,14 +124,19 @@
         where $s$ represents helicity.  
         Using the solutions (\ref{Msol}) and (\ref{0sol}), the Hamiltonian (\ref{ham}) can be expressed in terms of operators for massive and massless states. Here, $a_{\bm{p}}$ and $b_{\bm{p}}$ are expansion coefficients:  
         \begin{align}
-            %---------------------------------------------
             \label{hamenzan}
-            H_{MFA}&=\sum_{\textbf{\textit{p}},s} \qty{|\textbf{\textit{p}}|(a_{\textbf{\textit{p}}}^{(s)\dag}(t) a_{\textbf{\textit{p}}}^{(s)}(t)-b_{-\textbf{\textit{p}}}^{(s)}(t)
-            b_{-\textbf{\textit{p}}}^{(s)\dag}(t))+M\qty(b_{-\textbf{\textit{p}}}^{(s)} (t)a_{\textbf{\textit{p}}}^{(s)}(t)+a_{\textbf{\textit{p}}}^{(s)\dag}(t) b_{-\textbf{\textit{p}}}^{(s)\dag}(t))} +V \frac{m_0^2}{2}\sigma_0^2 \\
-            %---------------------------------------------
+            H_{MFA} &= \sum_{\textbf{\textit{p}},s} 
+            \qty{|\textbf{\textit{p}}| 
+            \qty(a_{\textbf{\textit{p}}}^{(s)\dag}(t) a_{\textbf{\textit{p}}}^{(s)}(t) 
+            - b_{-\textbf{\textit{p}}}^{(s)}(t)b_{-\textbf{\textit{p}}}^{(s)\dag}(t))} \notag \\
+            &\hspace{5em} + M \qty(b_{-\textbf{\textit{p}}}^{(s)}(t)a_{\textbf{\textit{p}}}^{(s)}(t) 
+            + a_{\textbf{\textit{p}}}^{(s)\dag}(t) b_{-\textbf{\textit{p}}}^{(s)\dag}(t)) 
+            + V \frac{m_0^2}{2} \sigma_0^2 \\
             \label{massfinite}
-            &=\sum_{\bm{p},r}E_p\qty(a^\dagger_M(\bm{p},r)a_M(\bm{p},r)-b_M(\bm{p},r)b^\dagger_M(\bm{p},r))+V\frac{m_o^2}{2}\sigma_0^2
-            %---------------------------------------------
+            &= \sum_{\bm{p},r} E_p 
+            \qty(a^\dagger_M(\bm{p},r)a_M(\bm{p},r) 
+            - b_M(\bm{p},r)b^\dagger_M(\bm{p},r)) 
+            + V \frac{m_o^2}{2} \sigma_0^2
         \end{align}
         From this Hamiltonian, the following Heisenberg equation can be derived:  
         \begin{eqnarray}
@@ -163,9 +169,12 @@
         \end{figure}
         The QGP phase can be observed in high-temperature regions in both high-density and low-density areas. Two types of phase transitions are related in the transition to the QGP phase. The first is the chiral phase transition. The second is the deconfinement-confinement phase transition.  
         
-        The chiral phase transition is the spontaneous breaking of chiral symmetry as the vacuum undergoes a phase transition, allowing quarks to acquire a substantial effective mass. In other words, the chiral phase transition is deeply related to the mass acquisition of hadrons.  
-               
-        The deconfinement-confinement phase transition pertains to the confinement of quarks. In the hadronic ground state, quarks are confined by color interaction. However, in the QGP state, quarks are resolved from confinement and transition into a plasma state. This is the deconfinement-confinement phase transition. While these transitions are believed to occur at approximately a similar critical temperature, this relationship is not self-evident, and research is still ongoing. 
+        The chiral phase transition is the spontaneous breaking of chiral symmetry as the vacuum undergoes a phase transition, allowing quarks to acquire a substantial effective mass. In other words, the chiral phase transition is deeply related to the mass acquisition of hadrons. 
+        The deconfinement-\-confinement phase transition pertains to the con\-finement of quarks. 
+        In the hadronic ground state, quarks are confined by color interaction.
+        However, in the QGP state, quarks are resolved from confinement and transition into a plasma state. 
+        This is the deconfinement-\-confinement phase transition. 
+        While these transitions are believed to occur at approximately a similar critical temperature, this relationship is not self-evident, and research is still ongoing.
         
         % Additionally, an intriguing aspect of the QCD phase diagram is the nature of phase transition orders. At zero baryon number density, lattice QCD calculations have been extensively performed, revealing that the transition is a crossover, i.e., a continuous phase transition. On the other hand, in regions with high baryon number density, lattice QCD calculations face challenges due to the sign problem, making it difficult to predict the nature of the transition. Consequently, effective models play a crucial role. Analyses based on effective models suggest that a first-order phase transition is expected. Accordingly, research exploring the locations of phase transitions on the phase diagram remains highly active.  
     \subsection{Heaby Ion collision}

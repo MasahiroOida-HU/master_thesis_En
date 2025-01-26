@@ -12,6 +12,8 @@
 \usepackage{fancyhdr} % ヘッダー・フッターのカスタマイズ用パッケージ
 \usepackage{titlesec} % セクションのスタイル変更用（オプション）
 \usepackage{caption}
+\usepackage[english]{babel}
+\usepackage{graphicx}  % プリアンブルで読み込み
 
 \newcommand{\KS}[1]{\textcolor{red}{\textbf{#1}}}
 
@@ -59,19 +61,14 @@
     \setcounter{section}{0}
     %はじめに
     \input{0_Abstract.tex}
-
     %第1章
     \input{1_Introduction.tex}
-
     %第2章
     \input{2_Detector.tex}
-
     %第3章
     \input{3_Analysis.tex}
-
     %第4章
     \input{4_Results.tex}
-
     \newpage
     \begin{thebibliography}{99}
       \input{Reference.tex}
