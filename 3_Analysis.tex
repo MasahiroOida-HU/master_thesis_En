@@ -4,15 +4,15 @@
 \label{Analysis}
     \subsection{DataSet}
     \label{DataSet}
-        The data used is a part of the 500 kHz $pp$ collisions at $\sqrt{s}=13.6$ TeV, obtained in 2022. The dataset name is LHC22o\_apass7. The data from the Monte Carlo simulation used in \ref{Analysis:Matching} was generated using PYTHIA8 for the 500 kHz $pp$ collisions at $\sqrt{s}=13.6$ TeV with minimum bias (MB) event simulations.
+        The data used is a part of the 500 kHz $pp$ collisions at $\sqrt{s}=13.6$ TeV, obtained in 2022.\@ The dataset name is LHC22o\_apass7.\@ The data from the Monte Carlo simulation used in \ref{Analysis:Matching} was generated using PYTHIA8 for the 500 kHz $pp$ collisions at $\sqrt{s}=13.6$ TeV with minimum bias (MB) event simulations.
         
     \subsection{Event selection}
     \label{Event_selection}
-        The position of the proton-proton collision was measured by the ITS detector system. The Z-coordinate of the collision point, denoted as VtxZ, was selected with the condition $|VtxZ| < 10$ cm, using the ITS center at Z = 0 as the reference. This cut value is aligned with the ITS acceptance. The number of events obtained with this cut is $5.5 \times 10^9$.
+        The position of the proton-proton collision was measured by the ITS detector system. The Z-coordinate of the collision point, denoted as VtxZ, was selected with the condition $|VtxZ| < 10$ cm, using the ITS center at Z = 0 as the reference. This cut value is aligned with the ITS acceptance. The number of events obtained with this cut is $5.5 \times 10^9$.\@
 
     \subsection{Single muon track reconstruction}
     \label{Single_reco}
-        The tracks used in this thesis are not the physical quantities obtained in \ref{MFT-MUON_matching}, but rather the recalculated physical quantities using the $eta$ and $\phi$ of the MFT standalone track, and the momentum $p$ of the MCH track used for global track reconstruction. This recalculation method improves the resolution of the track's $p_T$, $\eta$, and $\phi$ by using the $eta$ and $\phi$ of the MFT track, which is not affected by the front absorber, and the more precise momentum $p$ of the MCH track. Additionally, values such as DCA and $R_{abs}$ were calculated from the global track as follows. The DCA refers to the distance described in "Analysis:reco:DCA." First, the global track is linearly extrapolated to the Z-coordinate of the collision point (IP). The distance between this extrapolated position and the collision point is calculated as the DCA. Furthermore, $R_{abs}$ is the distance shown in the figure. The distance from the reconstructed global track to the end of the absorber along the beam axis is calculated as $R_{abs}$.
+        The tracks used in this thesis are not the physical quantities obtained in \ref{MFT-MUON_matching}, but rather the recalculated physical quantities using the $eta$ and $\phi$ of the MFT standalone track, and the momentum $p$ of the MCH track used for global track reconstruction. This recalculation method improves the resolution of the track's $p_T$, $\eta$, and $\phi$ by using the $eta$ and $\phi$ of the MFT track, which is not affected by the front absorber, and the more precise momentum $p$ of the MCH track. Additionally, values such as DCA and $R_{abs}$ were calculated from the global track as follows. The DCA refers to the distance described in "Analysis:reco:DCA" First, the global track is linearly extrapolated to the Z-coordinate of the collision point (IP).\@ The distance between this extrapolated position and the collision point is calculated as the DCA.\@ Furthermore, $R_{abs}$ is the distance shown in the figure. The distance from the reconstructed global track to the end of the absorber along the beam axis is calculated as $R_{abs}$.\@
 
         \begin{figure}[htbp]
             % Left figure
@@ -148,7 +148,7 @@
                 \begin{eqnarray}
                     f(m)=N_0*\exp{-p1* m}+N_{\omega}*\exp{-\frac{1}{2}\qty(\frac{m-M_{\omega}}{\sigma_{\omega}})^2}+N_{\phi}*\exp{-\frac{1}{2}\qty(\frac{m-M_{\phi}}{\sigma_{\phi}})^2}
                 \end{eqnarray}
-                where, $N_0, N_{\omega}, N_{\phi}, M_{\omega}, M_{\phi}, \sigma_{\omega}, \sigma_{\phi}$ are fit parameters, with $M_{\omega}$ and $M_{\phi}$ representing the mean mass positions of $\omega$ and $\phi$, and $\sigma_{\omega}$ and $\sigma_{\phi}$ corresponding to the mass widths. This fit function was applied to the correlated invariant mass distributions in \ref{Analysis:Dimuon:CB:CB_1to2} ~ \ref{Analysis:Dimuon:CB:CB_6to10}. The results are shown in \ref{Analysis:Dimuon:Yield:fit_1to2} ~ \ref{Analysis:Dimuon:Yield:fit_6to10}.
+                where, $N_0, N_{\omega}, N_{\phi}, M_{\omega}, M_{\phi}, \sigma_{\omega}, \sigma_{\phi}$ are fit parameters, with $M_{\omega}$ and $M_{\phi}$ representing the mean mass positions of $\omega$ and $\phi$, and $\sigma_{\omega}$ and $\sigma_{\phi}$ corresponding to the mass widths. This fit function was applied to the correlated invariant mass distributions in \ref{Analysis:Dimuon:CB:CB_1to2} ~ \ref{Analysis:Dimuon:CB:CB_6to10}. The results are shown in \ref{Analysis:Dimuon:Yield:fit_1to2} ~ \ref{Analysis:Dimuon:Yield:fit_6to10}.\@
                 \begin{figure}[htbp]
                     \centering
                     \begin{minipage}{0.45\textwidth}
@@ -276,8 +276,7 @@
                     \label{fig:chi2_200}
                 \end{minipage}
             \end{figure}
-            Similarly, from the fit results, the yields for $\omega \rightarrow \mu\mu$ and $\phi \rightarrow \mu\mu$ were obtained. These yields were then normalized by dividing by the number of dimuons in the same mass region, and the optimization was performed to maximize $S/\sqrt{S+BG}$. The resulting plot is shown below, where the x-axis is the matching $\chi^2$ and the y-axis is $S/\sqrt{S+BG}$. From this, it is observed that the optimal value for the matching $\chi^2$ is $\chi^2 <$ 30.
-
+            Similarly, from the fit results, the yields for $\omega \rightarrow \mu\mu$ and $\phi \rightarrow \mu\mu$ were obtained. These yields were then normalized by dividing by the number of dimuons in the same mass region, and the optimization was performed to maximize $S/\sqrt{S+BG}$.\@ The resulting plot is shown below, where the x-axis is the matching $\chi^2$ and the y-axis is $S/\sqrt{S+BG}$.\@ From this, it is observed that the optimal value for the matching $\chi^2$ is $\chi^2 <$ 30.\@
             \begin{figure}[htbp]
                 \centering
                 % Left figure
@@ -344,7 +343,7 @@
                         \label{Analysis:Matching:pt cutted}
                     \end{minipage}
                 \end{figure}
-                In \ref{Analysis:Matching:eta cutted}, all reconstructed tracks are shown in black, with red representing correct match tracks, blue representing fake match tracks, and green representing the true muon track distribution. By comparing the green distribution in \ref{Analysis:Matching:eta}, we observe that after the cut, tracks outside the acceptance have been removed. However, fake match tracks inside the acceptance remain. As shown in the $p_T$ distribution, there are still many fake match tracks at low $p_T$.
+                In \ref{Analysis:Matching:eta cutted}, all reconstructed tracks are shown in black, with red representing correct match tracks, blue representing fake match tracks, and green representing the true muon track distribution. By comparing the green distribution in \ref{Analysis:Matching:eta}, we observe that after the cut, tracks outside the acceptance have been removed. However, fake match tracks inside the acceptance remain. As shown in the $p_T$ distribution, there are still many fake match tracks at low $p_T$.\@
                 The resolution of each physical quantity is shown below.
                 \begin{figure}[htbp]
                     \centering
