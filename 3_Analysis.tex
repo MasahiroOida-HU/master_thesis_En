@@ -278,6 +278,7 @@
             The results from the table above are presented as graphs in \ref{fig:omega_yield} and \ref{fig:phi_yield}.
 
     \subsection{Analysis for improving MFT-MCH matching purity}
+    \label{matching improvements}
         The mass distribution of dimuons with \( p_T \) below 1 GeV, which is not shown in \ref{Analysis:Dimuon:CB:CB_pt_separation}, is presented here.
         \begin{figure}
             \centering
@@ -469,15 +470,15 @@
                 \begin{minipage}{0.45\textwidth}
                     \centering
                     \includegraphics[width=\textwidth]{fig/3_5_6_efficiency_pt.pdf}
-                    \captionsetup{labelformat=empty}
                     \caption{Efficency of $p_T$}
+                    \label{Efficency_of_pt}
                 \end{minipage}
                 \hfill
                 \begin{minipage}{0.45\textwidth}
                 \centering
                     \includegraphics[width=\textwidth]{fig/3_5_6_efficiency_eta.pdf}
-                    \captionsetup{labelformat=empty}
                     \caption{Efficency of $\eta$}
+                    \label{Efficency_of_eta}
                 \end{minipage}
                 \\
                 \vspace{1em}
@@ -485,25 +486,29 @@
                 \centering
                 \includegraphics[width=\textwidth]{fig/3_5_6_purity_pt.pdf}
                     \caption{Purity of $p_T$}
+                    \label{purity_of_pt}
                 \end{minipage}
                 \hfill
                 \begin{minipage}{0.45\textwidth}
                     \centering
                     \includegraphics[width=\textwidth]{fig/3_5_6_purity_eta.pdf}
-                \caption{Purity of $\eta$} 
+                    \caption{Purity of $\eta$} 
+                    \label{purity_of_eta}
                 \end{minipage}
                 \\
                 \vspace{1em}
                 \begin{minipage}{0.45\textwidth}
-                        \centering
-                        \includegraphics[width=\textwidth]{fig/3_5_6_effpuri_pt.pdf}
+                    \centering
+                    \includegraphics[width=\textwidth]{fig/3_5_6_effpuri_pt.pdf}
                     \caption{Efficency $\times$ Purity of $p_T$}
+                    \label{EffPuri_of_pt}
                 \end{minipage}
                 \hfill
                 \begin{minipage}{0.45\textwidth}
                     \centering
                     \includegraphics[width=\textwidth]{fig/3_5_6_effpuri_eta.pdf}
                     \caption{Efficency $\times$ Purity of $\eta$}
+                    \label{EffPuri_of_eta}
                 \end{minipage}
             \end{figure}
             The \( |\Delta \eta| < 0.2 \) cut was applied in such a way as to discard as few correct match tracks as possible, while removing fake match tracks. For the \( p_T \) distribution, the efficiency drops below 2 GeV, but the matching purity improves. The product of efficiency \(\times\) purity remains unchanged compared to before the cut. This indicates that the cut does not significantly remove correct matches. For the \(\eta\) distribution, efficiency is reduced in the range \( -3.6 < \eta < -3 \), but matching purity improves in the range \( -4 < \eta < -2 \). Similarly, the product of efficiency \(\times\) purity for \(\eta\) also remains unchanged compared to before the cut.
