@@ -2,7 +2,7 @@
 \label{Analysis}
     \subsection{DataSet}
     \label{DataSet}
-        The data used is a part of $pp$ collisions at $\sqrt{s}=13.6$ TeV obtained in 2022. The collision rate of $pp$ is $500$ kHz, and the dataset name is LHC22o$\_$apass7.
+        The data used is a part of $pp$ collisions at $\sqrt{s}=13.6$ TeV obtained in 2022. The collision rate of $pp$ is $500$ kHz, and the dataset name is LHC22o$\_$apass7.\@
         The Monte Carlo simulation data used in \ref{Analysis:Matching} utilized Pythia8 Monash to reproduce 500 kHz $pp$ collisions at $\sqrt{s}=13.6$ TeV, employing minimum bias event simulations without extracting specific events.
         
     \subsection{Event selection}
@@ -109,6 +109,7 @@
                     \label{All_pt_CB}
                 \end{figure}
                 The black distribution represents the invariant mass reconstructed by pairing oppositely charged muon particles from all combinations within the same event, while the blue distribution represents the uncorrelated background events estimated using the Like Sign method. The red distribution, obtained by subtracting the blue from the black one, represents the dimuon invariant mass distribution with correlations.
+
                 The mass distributions were separated by dimuon $p_T$, and uncorrelated background events were subtracted using the Like Sign method in each invariant mass distribution to examine the transverse momentum dependence of the $\omega$ and $\phi$ yields. The subtracted plots are shown in Figure \ref{Analysis:Dimuon:CB:CB_pt_separation}.
 
                 \begin{figure}[H]
@@ -171,24 +172,25 @@
                     \item $b\bar{b} \rightarrow B\bar{B} \rightarrow \mu^+ \mu^- + others$
                 \end{itemize}
                 The decays \(\omega \rightarrow \mu\mu\) and \(\phi \rightarrow \mu\mu\) are known to exhibit sharp peak structures from previous lepton pair measurements, forming peaks near 0.8 \(\mathrm{GeV/c^2}\) and 1.0 \(\mathrm{GeV/c^2}\) in the mass distribution.
-                It is known that no sharp peak structures exist for any decays other than the two-body decays of \(\omega\) and \(\phi\). Therefore, the continuous component was fitted using an exponential function. The fitting was performed in the range of 0.5 < \(M_{\mu\mu}\) < 1.3 \(\mathrm{GeV/c^2}\), excluding the regions with peak structures at 0.7 < \(M_{\mu\mu}\) < 0.86 and 0.92 < \(M_{\mu\mu}\) < 1.15. The continuous component was fitted using the exponential function shown (\ref{fit:BG}).
+                It is known that no sharp peak structures exist for any decays other than the two-body decays of \(\omega\) and \(\phi\).\@ Therefore, the continuous component was fitted using an exponential function. The fitting was performed in the range of 0.5 < \(M_{\mu\mu}\) < 1.3 \(\mathrm{GeV/c^2}\), excluding the regions with peak structures at 0.7 < \(M_{\mu\mu}\) < 0.86 and 0.92 < \(M_{\mu\mu}\) < 1.15. The continuous component was fitted using the exponential function shown (\ref{fit:BG}).\@
                 \begin{eqnarray}
                     \label{fit:BG}
                     f_{BG}(m)=N_0*\exp{-p1* m}
                 \end{eqnarray}
                 where, \(N_0\) and \(p1\) are the fit parameters. The continuous component mass distribution was subtracted using the results from the fit. Gaussian fits were performed for the \(\omega\) and \(\phi\) in the mass regions 0.7 < \(M_{\mu\mu}\) < 0.86 \(\mathrm{GeV/c^2}\) and 0.92 < \(M_{\mu\mu}\) < 1.15 \(\mathrm{GeV/c^2}\), respectively. The fitting function is given by (\ref{fit:omega}) and (\ref{fit:phi}).
+
                 \begin{eqnarray}
                     \label{fit:omega}
                     f_{\omega} &=& N_{\omega}*\exp{-\frac{1}{2}\qty(\frac{m-M_{\omega}}{\sigma_{\omega}})^2}\\\
                     \label{fit:phi}
                     f_{\phi} &=& N_{\phi}*\exp{-\frac{1}{2}\qty(\frac{m-M_{\phi}}{\sigma_{\phi}})^2}
                 \end{eqnarray}
-                The fit parameters are \(N_{\omega}, N_{\phi}, M_{\omega}, M_{\phi}, \sigma_{\omega}, \sigma_{\phi}\). Specifically, \(M_{\omega}\) and \(M_{\phi}\) correspond to the mean mass positions of \(\omega\) and \(\phi\), while \(\sigma_{\omega}\) and \(\sigma_{\phi}\) correspond to the mass widths. Using the fit parameters obtained from the continuous component and the Gaussian fits for \(\omega\) and \(\phi\), all functions were combined, and a global fit was performed to extract the mean mass positions and mass widths of \(\omega\) and \(\phi\). The fit range is 0.5 < \(M_{\mu\mu}\) < 1.3 \(\mathrm{GeV/c^2}\). The function for the overall fit is given by the (\ref{fit:globalfit}).
+                The fit parameters are \(N_{\omega}, N_{\phi}, M_{\omega}, M_{\phi}, \sigma_{\omega}, \sigma_{\phi}\).\@ Specifically, \(M_{\omega}\) and \(M_{\phi}\) correspond to the mean mass positions of \(\omega\) and \(\phi\), while \(\sigma_{\omega}\) and \(\sigma_{\phi}\) correspond to the mass widths. Using the fit parameters obtained from the continuous component and the Gaussian fits for \(\omega\) and \(\phi\), all functions were combined, and a global fit was performed to extract the mean mass positions and mass widths of \(\omega\) and \(\phi\).\@ The fit range is 0.5 < \(M_{\mu\mu}\) < 1.3 \(\mathrm{GeV/c^2}\).\@ The function for the overall fit is given by the (\ref{fit:globalfit}).
                 \begin{eqnarray}
                     \label{fit:globalfit}
                     f(m)=N_0*\exp{-p1* m}+N_{\omega}*\exp{-\frac{1}{2}\qty(\frac{m-M_{\omega}}{\sigma_{\omega}})^2}+N_{\phi}*\exp{-\frac{1}{2}\qty(\frac{m-M_{\phi}}{\sigma_{\phi}})^2}
                 \end{eqnarray}
-                The parameters for the overall fit are similarly \(N_0, N_{\omega}, N_{\phi}, M_{\omega}, M_{\phi}, \sigma_{\omega}, \sigma_{\phi}\). The fit results are shown in Figure \ref{Analysis:Dimuon:Yield:fit} and Table \ref{Analysis:Dimuon:Yield:Fit_Results}.
+                The parameters for the overall fit are similarly \(N_0, N_{\omega}, N_{\phi}, M_{\omega}, M_{\phi}, \sigma_{\omega}, \sigma_{\phi}\).\@ The fit results are shown in Figure \ref{Analysis:Dimuon:Yield:fit} and Table \ref{Analysis:Dimuon:Yield:Fit_Results}.
                 \begin{figure}[H]
                     \centering
                     \begin{minipage}{0.45\textwidth}
@@ -342,6 +344,7 @@
                 \caption{The result of Combinatorial Background subtraction after applying the MFT-MCH matching $\chi^2$ cut}
                 \label{Analysis:Dimuon:Matching_CB}
             \end{figure}
+
             The black distribution decreases in size by reducing the \(\chi^2\) cut. Additionally, it can be observed that the \(\omega\) and \(\phi\) peaks in the red distribution become more pronounced. Figure \ref{Analysis:Dimuon:Matching_Fit} shows the fitting results for this red distribution.
             \begin{figure}[H]
                 \centering
@@ -386,7 +389,7 @@
                 \label{Analysis:Dimuon:Matching_Fit}
             \end{figure}
             %need addition
-            The horizontal axis represents the matching \(\chi^2\), while the vertical axis shows \(S/\sqrt{S+BG}\). As the cut value is reduced, the value of \(S/\sqrt{S+BG}\) increases. When a cut of \(\chi^2<30\) is applied, \(S/\sqrt{S+BG}\) reaches its maximum for both \(\omega\) and \(\phi\).\@ From this result, it is evident that the optimal matching \(\chi^2\) value is \(\chi^2<30\).\@
+            The horizontal axis represents the matching \(\chi^2\), while the vertical axis shows \(S/\sqrt{S+BG}\).\@ As the cut value is reduced, the value of \(S/\sqrt{S+BG}\) increases. When a cut of \(\chi^2<30\) is applied, \(S/\sqrt{S+BG}\) reaches its maximum for both \(\omega\) and \(\phi\).\@ From this result, it is evident that the optimal matching \(\chi^2\) value is \(\chi^2<30\).\@
             \begin{figure}[htbp]
                 \centering
                 % Left figure
@@ -417,7 +420,7 @@
             \end{figure}
             Figure \ref{Analysis:Matching:eta} shows the \(\eta\) distribution of Global Tracks for all \(p_T\) regions. The black histogram represents the reconstructed \(\eta\) distribution of Global Tracks. The blue histogram corresponds to the \(\eta\) distribution of reconstructed tracks identified as Fake matches, while the red histogram represents the \(\eta\) distribution of correctly matched tracks. The green histogram represents the true \(\eta\) distribution corresponding to the black reconstructed tracks.  
             Comparing the black reconstructed muon distribution with the green true distribution, the acceptance range of MFT-MCH-MID Tracks is \(-3.6 < \eta < -2.5\). However, in the green distribution, muons with \(\eta\) values smaller than \(-3.6\) are reconstructed within the \(-3.6 < \eta < -2.5\) range. This phenomenon is likely caused by muons that passed through the absorber and subsequently traversed the MCH-MID system while being outside the MFT acceptance. 
-            To remove such tracks, a \(\Delta \eta\) cut is applied as (\ref{Deltaeta_eq}).
+            To remove such tracks, a \(\Delta \eta\) cut is applied as (\ref{Deltaeta_eq}).\@
             \begin{eqnarray}
                 \label{Deltaeta_eq}
                 \Delta \eta = \text{MFT} \, \eta - \text{MCH} \, \eta  
