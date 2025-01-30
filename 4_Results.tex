@@ -1,7 +1,7 @@
 \newpage
 \clearpage
 \section{Results and Discussion}
-This chapter presents the graphs of the $\omega$ and $\phi$ yields calculated in \ref{Analysis:Dimuon:Yield:Results} as the conclusion.
+This chapter presents the graphs of the $\omega$ and $\phi$ row yields calculated in \ref{Analysis:Dimuon:Yield:Results} as the conclusion.
     \begin{figure}[htbp]
         \centering
         % Left side figure
@@ -20,14 +20,30 @@ This chapter presents the graphs of the $\omega$ and $\phi$ yields calculated in
             \label{fig:phi_yield}
         \end{minipage}
     \end{figure}
-    Figures \ref{fig:omega_yield} and \ref{fig:phi_yield} show the transverse momentum spectra of the production yields of $\omega$ and $\phi$. The horizontal axis represents the transverse momentum of $\omega$ and $\phi$, while the vertical axis represents the number of counts.
-    Since these spectra are uncorrected, no physical discussion can be made. However, it is observed that the yields decrease as the transverse momentum increases. This behaviour resembles the $p_T$ spectrum of $\phi$ production cross-sections measured using forward dimuons in Run 2. Although the $p_T$ spectrum of $\omega$ production cross-sections has not been published, the present results exhibit a similar trend to those measured in Run 2.  
+    Figure \ref{fig:omega_yield} and Figure \ref{fig:phi_yield} show the transverse momentum spectra of the production yields of $\omega$ and $\phi$. The horizontal axis represents the transverse momentum of $\omega$ and $\phi$, while the vertical axis represents the number of counts.
+    Since these spectra are uncorrected, no physical discussion can be made. However, it is observed that the yields decrease as the transverse momentum increases. 
+    %This behaviour resembles the $p_T$ spectrum of $\phi$ production cross-sections measured using forward dimuons in Run 2. Although the $p_T$ spectrum of $\omega$ production cross-sections has not been published, the present results exhibit a similar trend to those measured in Run 2.  
     Here, it is necessary to consider the contribution of $\rho \rightarrow \mu\mu$. The $\rho$ meson has a mean mass of $m = 775.26$ MeV and a full width of $\Gamma = 149.1$ MeV, leading to a broader distribution than $\omega$, which is located at a very similar mass position. Given that the signal extraction method used in this analysis accounts for the broad width of the $\rho$, it is considered that the peak structure of $\omega$ is not significantly affected.  
-    As a prospect, improving the resolution of single-muon kinematic variables will enhance the mass resolution, making the $\omega$ peak sharper and allowing better separation between the $\rho$ and $\omega$ peaks. Additionally, by applying acceptance-efficiency corrections using the forward detector system for $\omega \rightarrow \mu\mu$ and $\phi \rightarrow \mu\mu$ dimuon reconstruction, the integrated luminosity can be determined from the event counts. This will enable the calculation of production cross-sections from the present results, allowing for direct comparison with Run 2 results.
-   
-   
-    Discuss single muon track reconstruction, \ref{matching improvements}, and prospects. In the current muon track reconstruction algorithm, the \(\eta\) and \(\phi\) of the muon are determined using the MFT Track to improve their precision. However, the DCA is calculated using parameters obtained from the global fit of the Global Track. Since using tracks closer to the collision point allows for more precise measurements unaffected by the absorber, it is expected that the accuracy of the DCA measurement can be improved by using the parameters of the MFT track that constitutes the Global Track. Furthermore, improvements in MFT-MCH matching are also needed. As seen in Figure \ref{purity_of_pt}, the matching purity significantly decreases at low transverse momentum (\( p_T \)). This degradation occurs because low-\( p_T \) muons undergo multiple scattering and energy loss in the absorber, making MFT-MCH matching more challenging. However, this study demonstrated that applying a \( \Delta \eta \) cut improves matching purity in the low-\( p_T \) region. This result suggests that continued analysis can further enhance matching purity.
-   
+    
+    \subsection{Prospect of $\omega$ and $\phi$ cross section measurement}
+        As a future perspective, we will use the yields of $\omega \rightarrow\mu\mu$ and $\phi \rightarrow\mu\mu$ calculated by\ref{fig:omega_yield} and\ref{fig:phi_yield} to calculate the $\omega$ $\phi$ We aim at the transverse momentum spectrum of the production cross-section.
+        (\ref{cross-section}) can calculate the production cross-section\cite{phi-crosssection}.
+        \begin{eqnarray}
+            \frac{d^2\sigma}{dy dp_T} &=& \frac{1}{\Delta y \Delta p_T}\times \frac{N(\Delta p_T,\Delta y)}{[Acc\times Eff](\Delta p_T,\Delta y)\times BR_{\phi,\omega\rightarrow\mu\mu}\times L_{int}}
+            \label{cross-section}
+        \end{eqnarray}
+        As a future perspective, I will use the yields of $\omega \rightarrow\mu\mu$ and $\phi \rightarrow\mu\mu$ calculated by Figure \ref{fig:omega_yield} and Figure \ref{fig:phi_yield} to calculate the $\omega$ $\phi$. We aim at the transverse momentum spectrum of the production cross-section.
+        The following equation can calculate the production cross section.
+        where,$[Acc \times Eff](\Delta p_T,\Delta y)$ is the acceptance efficiency correction factor for $\omega \rightarrow \mu\mu,\phi \rightarrow \mu\mu$, BR is the branching ratio of $\omega\rightarrow\mu,\phi\rightarrow\mu$, $L_{int}$ is the integral luminosity.
+        Acceptance efficiency correction was performed using Monte Carlo simulations with a forward detector group of $\omega\rightarrow\mu\mu,\phi\rightarrow\mu\mu$.
+        It can be obtained by calculating the ratio of the number reconstructed/number generated. With this correction, the generated cross-section of $\omega,\phi$ can be derived by calculating the City of Integral Lummi and Branching Ratio. Therefore, as a prospect, we will use Monte Carlo simulation to obtain the generating cross section of $\omega,\phi$ with the acceptance-efficiency correction.
+        This will enable the calculation of production cross-sections from the present results, allowing for comparison with Run 2 results. I will compare the generated cross sections of $\omega,\phi$ measured in Run 2 in the trajectory, including MFT and investigate the quality of the trajectory reconstruction in Run 3.
+
+    \subsection{Single muon track resolution improvements}   
+        Discuss single muon track reconstruction, \ref{matching improvements}, and prospects. In the current muon track reconstruction algorithm, the \(\eta\) and \(\phi\) of the muon are determined using the MFT Track to improve their precision. However, the DCA is calculated using parameters obtained from the global fit of the Global Track. Since using tracks closer to the collision point allows for more precise measurements unaffected by the absorber, it is expected that the accuracy of the DCA measurement can be improved by using the parameters of the MFT track that constitutes the Global Track. Furthermore, improvements in MFT-MCH matching are also needed. As seen in Figure \ref{purity_of_pt}, the matching purity significantly decreases at low transverse momentum (\( p_T \)). This degradation occurs because low-\( p_T \) muons undergo multiple scattering and energy loss in the absorber, making MFT-MCH matching more challenging. However, this study demonstrated that applying a \( \Delta \eta \) cut improves matching purity in the low-\( p_T \) region. This result suggests that continued analysis can further enhance matching purity.
+        As a prospect, improving the resolution of single-muon kinematic variables will enhance the mass resolution, making the $\omega$ peak sharper and allowing better separation between the $\rho$ and $\omega$ peaks. Additionally, by applying acceptance-efficiency corrections using the forward detector system for $\omega \rightarrow \mu\mu$ and $\phi \rightarrow \mu\mu$ dimuon reconstruction, the integrated luminosity can be determined from the event counts. 
+    
+    \subsection{Search for chiral symmetry restoration}
     The ultimate goal is to measure the changes in the mass distribution of light vector mesons in lead-lead collision events. This study has revealed several remaining challenges, including issues with matching purity at low transverse momentum and the development of the track reconstruction algorithm. Another challenge is improving the quality of muon tracks in high-multiplicity events in heavy-ion collisions. As a first step, efforts will be focused on improving matching purity and developing the track reconstruction algorithm in proton-proton collisions, where the event multiplicity is relatively low. 
     Subsequently, similar improvements will be pursued in heavy-ion collisions. 
     Going forward, the aim is to clarify the changes in the mass distribution of light vector mesons due to QGP formation and observe the restoration of chiral symmetry.
