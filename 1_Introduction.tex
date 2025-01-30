@@ -7,7 +7,7 @@
             \label{QCDlagrangian}
             \mathcal{L}_{QCD}=\sum_q \bar{\psi}_{q,a}\qty(i\gamma^\mu\partial_\mu-m_q)\psi_{q,a}+g_s \sum_q \bar{\psi}_{q,a}\gamma^\mu T^A_{ab}\psi_{q,b}G^A_\mu-\frac{1}{4}G^A_{\mu\nu}G^{A\mu\nu}
         \end{eqnarray}
-        $\psi_{q,a}$ and $\bar{\psi}*{q,a}$ represent the quark and antiquark fields, where $q$ denotes the flavor degree of freedom, and $a$ denotes the color degree of freedom. $\gamma^\mu$ is the gamma matrics, $m_q$ is the particle mass corresponding to each flavor, $g_s$ is the QCD coupling constant, $T^A*{ab}$ are the generator matrices, $G^A_\mu$ is the gluon field, and $G^A_{\mu\nu}$ is the gluon field tensor.
+        $\psi_{q,a}$ and $\bar{\psi}_{q,a}$ represent the quark and antiquark fields, where $q$ denotes the flavor degree of freedom, and $a$ denotes the color degree of freedom. $\gamma^\mu$ is the gamma matrics, $m_q$ is the particle mass corresponding to each flavor, $g_s$ is the QCD coupling constant, $T^A_{ab}$ are the generator matrices, $G^A_\mu$ is the gluon field, and $G^A_{\mu\nu}$ is the gluon field tensor.
 
         The first term in (\ref{QCDlagrangian}) represents the term for a free particle of mass $m$, the second term represents the interaction between quarks and gluons, and the third term represents the interaction between gluons themselves. A significant difference from Quantum Electrodynamics (QED), which describes electromagnetic interactions, is the presence of the coupling constant $\alpha_s(Q^2)$ and the self-interaction of the gluon field. In QED, the coupling constant does not depend on the energy scale. However, the coupling constant $\alpha_s(Q^2)$ that appears in QCD depends on the energy scale.
         \begin{figure}[htbp]
@@ -63,6 +63,7 @@
                         \bar{q}\qty(i\gamma^\mu D_\mu)q &=& \bar{q}\qty(i\gamma^\mu D_\mu)\qty(P_R^2 + P_L^2)q \\  
                         &=& \bar{q} P_L \qty(i\gamma^\mu D_\mu) P_R q + \bar{q} P_R \qty(i\gamma^\mu D_\mu) P_L q \\  
                         &=& \bar{q}_R \qty(i\gamma^\mu D_\mu) q_R + \bar{q}_L \qty(i\gamma^\mu D_\mu) q_L  
+                        \label{kinetic term of QCD lagrangian}
                     \end{eqnarray}  
             
             \item Mass Term (Second Term of the QCD Lagrangian)
@@ -73,7 +74,7 @@
                     \end{eqnarray}  
         \end{itemize}
         
-        From the above, the kinetic term of the quark field can be separated into the right-handed and left-handed quark fields, thereby preserving chiral symmetry. However, the mass term mixes the right-handed and left-handed quark fields, breaking chiral symmetry. Considering the chiral limit ($m_q = 0$), the QCD Lagrangian preserves chiral symmetry.  
+        From the (\ref{kinetic term of QCD lagrangian}), the kinetic term of the quark field can be separated into the right-handed and left-handed quark fields, thereby preserving chiral symmetry. However, the mass term mixes the right-handed and left-handed quark fields, breaking chiral symmetry. Considering the chiral limit ($m_q = 0$), the QCD Lagrangian preserves chiral symmetry.  
         
         The order parameter for the spontaneous breaking of chiral symmetry is represented by the quark condensate $< \bar{q}q >$. As shown in Figure \ref{quark_condensate}, this quantity takes a finite value in the ground state of hadrons at standard temperature and density. But, it is expected to approach $< \bar{q}q > \sim 0$ at extremely high temperatures and densities.  
         \begin{figure}[htbp]  
@@ -235,7 +236,7 @@
         
         In the High-Mass Region, primordial dileptons (Drell-Yan) constitute the continuum component of the mass distribution. It is related to the initial state of the collision. In the Intermediate-Mass Region, thermal dileptons originating from the QGP and continuum components such as open-charm and open-beauty are observed. 
         
-        Finally, in the Low-Mass Region, the dilepton distribution is predominantly derived from light meson decays from the hadronic gas. Most dileptons from hadron decays have longer lifetimes compared to the QGP.\@ So these mesons observed in this region are mostly from the hadron gas. However, light vector mesons $(\rho, \omega, \phi)$ have extremely short lifetimes.　They may be affected by QGP.\@
+        Finally, in the Low-Mass Region, the dilepton distribution is predominantly derived from light meson decays from the hadronic gas. Most dileptons from hadron decays have longer lifetimes compared to the QGP.\@ So these mesons observed in this region are mostly from the hadron gas. However, light vector mesons $(\rho, \omega, \phi)$ have extremely short lifetimes. They may be affected by QGP.\@
     \subsection{Search for chiral symmetry restoration in QGP}
         \begin{figure}[hbtp]
             \centering
