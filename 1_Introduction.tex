@@ -2,23 +2,23 @@
 \section{Introduction}
     \subsection{QCD}
     \label{Intro:QCD}
-        The fundamental components of the matter around us are elementary particles. The behaviour of elementary particles, such as quarks and gluons, is described by quantum field theory. In particular, quarks and gluons possess degrees of freedom called "color," the physics governing this degree of freedom is known as Quantum Chromodynamics (QCD).\@ QCD is based on an SU(3) gauge theory and describes the strong interaction. The QCD Lagrangian is expressed as follows:
+        The fundamental components of the matter around us are elementary particles. The behaviour of elementary particles, such as quarks and gluons, is described by quantum field theory. In particular, quarks and gluons possess degrees of freedom called color, the physics governing this degree of freedom is known as Quantum Chromodynamics (QCD).\@ QCD is based on an SU(3) gauge theory and describes the strong interaction. The QCD Lagrangian is expressed as follows:
         \begin{eqnarray}
             \label{QCDlagrangian}
             \mathcal{L}_{QCD}=\sum_q \bar{\psi}_{q,a}\qty(i\gamma^\mu\partial_\mu-m_q)\psi_{q,a}+g_s \sum_q \bar{\psi}_{q,a}\gamma^\mu T^A_{ab}\psi_{q,b}G^A_\mu-\frac{1}{4}G^A_{\mu\nu}G^{A\mu\nu}
         \end{eqnarray}
-        $\psi_{q,a}$ and $\bar{\psi}*{q,a}$ represent the quark and antiquark fields, where $q$ denotes the flavor degree of freedom, and $a$ denotes the color degree of freedom. $\gamma^\mu$ is the gamma matrics, $m_q$ is the particle mass corresponding to each flavor, $g_s$ is the QCD coupling constant, $T^A*{ab}$ are the generator matrices, $G^A_\mu$ is the gluon field, and $G^A_{\mu\nu}$ is the gluon field tensor.
+        $\psi_{q,a}$ and $\bar{\psi}_{q,a}$ represent the quark and antiquark fields, where $q$ denotes the flavor degree of freedom, and $a$ denotes the color degree of freedom. $\gamma^\mu$ is the gamma matrics, $m_q$ is the quark mass corresponding to each flavor, $g_s$ is the QCD coupling constant, $T^A_{ab}$ are the generator matrices, $G^A_\mu$ is the gluon field, and $G^A_{\mu\nu}$ is the gluon field tensor.
 
         The first term in (\ref{QCDlagrangian}) represents the term for a free particle of mass $m$, the second term represents the interaction between quarks and gluons, and the third term represents the interaction between gluons themselves. A significant difference from Quantum Electrodynamics (QED), which describes electromagnetic interactions, is the presence of the coupling constant $\alpha_s(Q^2)$ and the self-interaction of the gluon field. In QED, the coupling constant does not depend on the energy scale. However, the coupling constant $\alpha_s(Q^2)$ that appears in QCD depends on the energy scale.
         \begin{figure}[htbp]
             \centering
             \includegraphics[keepaspectratio, scale=0.6]{fig/1_1_coupling_constant.png}
-            \caption{QCD coupling constant\cite{ParticleDataGroup:2024cfk}}
+            \caption{$Q^2$ dependence of QCD coupling constants}
             \label{coupling_constant}
         \end{figure}
-        Figure \ref{coupling_constant} shows how the coupling constant $\alpha_s(Q^2)$ changes with the energy scale. The coupling constant becomes small at high energy scales, corresponding to short distances. This reflects the phenomenon of asymptotic freedom, where quarks behave as free particles when they are sufficiently close to each other. On the other hand, at low energy scales corresponding to long distances, the coupling constant grows infinitely large. This represents the phenomenon of quark confinement, where quarks cannot be isolated as individual particles.
+        Figure \ref{coupling_constant} shows how the coupling constant $\alpha_s(Q^2)$ changes with the energy scale\cite{ParticleDataGroup:2024cfk}. The coupling constant becomes small at high energy scales, corresponding to short distances. This reflects the phenomenon of asymptotic freedom, where quarks behave as free particles when they are sufficiently close to each other. On the other hand, at low energy scales corresponding to long distances, the coupling constant grows infinitely large. This represents the phenomenon of quark confinement, where quarks cannot be isolated as individual particles.
         
-        Next, it describes the selfinteraction of gluons. The gluon field tensor is expressed as:
+        Next, we focus on gluon selfinteraction. The gluon field tensor is expressed as:
         \begin{eqnarray}
         \label{eq01}
             G^A_{\mu\nu} = \partial_\mu G^A_\nu - \partial_\nu G^A_\mu + g_s f^{ABC}G^B_\mu G^C_\nu
@@ -38,11 +38,12 @@
         These characteristics—namely, the coupling constant's energy dependence and the gluons' selfinteraction—contribute to the complex structure of the quark-gluon interactions.
     \subsection{Chiral symmetry}
     \label{Intro:Chiral_symmetry}  
-        The quark field can be separated into its right-handed and left-handed components. The projection operators for the right-handed and left-handed components are defined as $P_R$ and $P_L$, respectively. Using the $\gamma$ matrices, they are expressed as follows:    
+        The quark field can be separated into its right-handed and left-handed components. The projection operators for the right-handed and left-handed components are defined as $P_R$ and $P_L$, respectively. Using the $\gamma_5 = i \gamma_0 \gamma_1 \gamma_2 \gamma_3 $ matrices, they are expressed as follows:    
         \begin{eqnarray}
-            P_R = \frac{1+\gamma_5}{2}, \quad P_L = \frac{1-\gamma_5}{2} 
+            P_R = \frac{1+\gamma_5}{2}, \quad P_L = \frac{1-\gamma_5}{2}
+            \label{projection_operations}
         \end{eqnarray}
-        The following equations hold for these projection operators.
+        (\ref{projection_operations}) hold for these projection operators.
         \begin{equation}
             P_R + P_L = 1, \quad P_R P_L = 0, \quad P_R^2 = P_R, \quad P_L^2 = P_L  
         \end{equation}
@@ -73,24 +74,24 @@
         
         From the above, the kinetic term of the quark field can be separated into the right-handed and left-handed quark fields, thereby preserving chiral symmetry. However, the mass term mixes the right-handed and left-handed quark fields, breaking chiral symmetry. Considering the chiral limit ($m_q = 0$), the QCD Lagrangian preserves chiral symmetry.  
         
-        The quark represents the order parameter for the spontaneous breaking of chiral symmetry condensate $< \bar{q}q >$. As shown in Figure \ref{quark_condensate}, this quantity takes a finite value in the ground state of hadrons at standard temperature and density. But, it is expected to approach $< \bar{q}q > \sim 0$ at extremely high temperatures and densities. 
+        The quark represents the order parameter for the spontaneous breaking of chiral symmetry condensate $< \bar{q}q >$. As shown in Figure \ref{quark_condensate}\cite{Weise:1993ax}, this quantity takes a finite value in the ground state of hadrons at standard temperature and density. But, it is expected to approach $< \bar{q}q > \sim 0$ at extremely high temperatures and densities. 
         \begin{figure}[htbp]  
             \centering  
             \includegraphics[keepaspectratio, scale=0.6]{fig/1_1_quark_condensate.png}  
-            \caption{Quark condensate\cite{Weise:1993ax}}  
+            \caption{Temperature and density dependence of the expected value of quark condensation}  
             \label{quark_condensate}  
         \end{figure}  
         
         Since the vacuum expectation value of the quark condensate cannot be directly measured, as described later, various other probes are used to investigate the restoration of chiral symmetry.
     \subsection{NJL model}
     \label{NJL model}      
-        The interaction between quarks and gluons, as described in \ref{Intro:QCD}, exhibits a complex structure, making it difficult to understand various phenomena from first-principle calculations. Therefore, models are employed to describe various phenomena. One such model is the Nambu-Jona-Lasinio (NJL), an effective chiral model. Its Lagrangian is expressed as follows.
+        The interaction between quarks and gluons, as described in \ref{Intro:QCD}, exhibits a complex structure, making it difficult to understand various phenomena from first-principle calculations. Therefore, models are employed to describe various phenomena. One such model is the Nambu-Jona-Lasinio (NJL), an chiral effective model. Its Lagrangian is expressed as follows.
         \begin{eqnarray}
             \label{NJLmodel}
             \mathcal{L}=\bar{q}i\gamma \cdot \partial q -(-g)\qty[(\bar{q}q)^2+(\bar{q}i\gamma_5q)^2]
         \end{eqnarray}  
         where, $q$ and $\bar{q}$ represent quark and antiquark fields, respectively; $\gamma$ and $\gamma_5$ are gamma matrices, with $\gamma_5 = i \gamma_0 \gamma_1 \gamma_2 \gamma_3$. Since there is an attractive force between quarks and antiquarks, the coupling constant $g$ is positive and has a dimension of $[\text{mass}]^{-2}$.  
-        his model is an effective chiral theory for QCD at the energy scale of 1 GeV.\@ To determine the ground state of this Lagrangian, the self-consistent mean field approximation (MFA) is employed: 
+        This model is an effective chiral theory for QCD at the energy scale of 1 GeV.\@ To determine the ground state of this Lagrangian, the self-consistent mean field approximation (MFA) is employed: 
         \begin{eqnarray}
             \label{sigma_ev}
             \ev{\bar{q}q}\equiv \frac{-m_0^2 \sigma}{G}\\
@@ -108,7 +109,7 @@
             H_{MFA}=\int \dd[3]{\bm{x}}\qty{\bar{q}_\theta (x)(-i\gamma \cdot \nabla+M)q_{\theta}(x)+\frac{m_0^2}{2}\sigma_0^2}
         \end{eqnarray}
         where $\sigma_0^2 = \sigma^2 + \pi^2$. Since $\pi$ is considered sufficiently small, we write $\sigma$ to $\sigma_0$.  
-        From this Hamiltonian, the Dirac equation for mass $M$ can be derived. Its solution is given as:  
+        From this Hamiltonian, the Dirac equation for mass $M$ can be derived. Its solution is given as \ref{Msol}  
         \begin{eqnarray}
             \label{Msol}
             q_\theta (x)=\frac{1}{\sqrt{V}}\sum_{\bm{p},r=\pm} \sqrt{\frac{M}{E_p}}\qty{a_M(\bm{p},r)u_M(\bm{p},r)e^{-ip\cdot x}+b_M^{\dag}(\bm{p},r)v_M(\bm{p},r)e^{ip\cdot x}}
@@ -156,7 +157,7 @@
        $a_0(\textbf{\textit{p}},r)^{\dag}$ creates an eigenstate of chirality, while $a_M(\textbf{\textit{p}},r)^{\dag}$ creates an eigenstate of helicity. Based on the vacuum definition and \eqref{Bogoliubov transformation}, acting on $\ket{0}$ produces an eigenstate of helicity but not a definite chirality eigenstate. This implies that "chiral symmetry is spontaneously broken".  
         
         Thus, the NJL model theoretically predicts vacuum phase transitions. In our universe, it is believed that quark condensation spontaneously breaks chiral symmetry, leading to hadrons acquiring significant masses.
-    \subsection{Quark-Gluon Plasma (QGP)}
+    \subsection{Quark-Gluon Plasma}
         When hadrons are exposed to extremely high temperatures and densities, they transition into a plasma state known as the Quark-Gluon Plasma (QGP). In the QGP state, quarks are resolved from confinement, and chiral symmetry restoration is also expected. Furthermore, it is believed that the universe was in a QGP state immediately following the Big Bang. On the QCD phase diagram, which represents the phase structure of quarks and gluons, the QGP phase appears as shown in Figure \ref{QCD_Phase_Diagram}.    
         \begin{figure}[hbtp]
             \centering
@@ -164,14 +165,14 @@
             \caption{QCD Phase Diagram\cite{QCDPhaseDiagram}}
             \label{QCD_Phase_Diagram}
         \end{figure}
-        The QGP phase can be observed in high-temperature regions in both high-density and low-density areas. Two types of phase transitions are related in the transition to the QGP phase. The first is the chiral phase transition. The second is the deconfinement-confinement phase transition.  
+        The QGP phase can be observed in high-temperature regions in both high net baryon density and low net baryon density areas. Two types of phase transitions are related in the transition to the QGP phase. The first is the chiral phase transition. The second is the deconfinement-confinement phase transition.  
         
         The chiral phase transition is the spontaneous breaking of chiral symmetry as the vacuum undergoes a phase transition, allowing quarks to acquire a substantial effective mass. In other words, the chiral phase transition is deeply related to the mass acquisition of hadrons. 
         The deconfinement-\-confinement phase transition pertains to the con\-finement of quarks. 
         In the hadronic ground state, quarks are confined by color interaction.
         However, in the QGP state, quarks are resolved from confinement and transition into a plasma state. 
         This is the deconfinement-\-confinement phase transition. 
-        While these transitions are believed to occur at approximately a similar critical temperature, this relationship is not self-evident, and research is ongoing.
+        While these transitions are believed to occur at approximately a similar critical temperature, this relationship is not unsolved, and research is ongoing.
         
         % Additionally, an intriguing aspect of the QCD phase diagram is the nature of phase transition orders. At zero baryon number density, lattice QCD calculations have been extensively performed, revealing that the transition is a crossover, i.e., a continuous phase transition. On the other hand, in regions with high baryon number density, lattice QCD calculations face challenges due to the sign problem, making it difficult to predict the nature of the transition. Consequently, effective models play a crucial role. Analyses based on effective models suggest that a first-order phase transition is expected. Accordingly, research exploring the locations of phase transitions on the phase diagram remains highly active.  
     \subsection{Heaby Ion collision}
@@ -199,15 +200,15 @@
         % Some evidence of QGP includes jet quenching and strong elliptic flow. Jet quenching refers to the phenomenon where high-energy partons produced during the initial stage of high-energy collisions generate numerous high-momentum particles along their flight direction. However, due to their interactions with the QGP, the jets are quenched. High-energy partons passing through the medium lose energy, suppressing the jet phenomenon. Additionally, strong elliptic flow occurs when QGP generated during heavy-ion collisions exhibits a distinct collective flow depending on its density and temperature.
         The QGP generated in heavy-ion collisions has its density and temperature determined by the collision energy. High-density QGP regions are realised at collision energies of $\sqrt{s_{NN}} \lesssim 10$ [GeV].\@ At these energies, the colliding particles stop at the collision point. They create a high-density state where kinetic energy is converted directly into heat, increasing the temperature.  
   
-        On the other hand, high-temperature, low-density regions are achieved at collision energies of $\sqrt{s_{NN}} \gtrsim 100$ [GeV].\@ In this energy regime, the colliding particles do not stop but pass through each other, producing many pair creations. As a result, the baryon number density does not become large relative to the temperature. However, a high energy density region leads to the creation of high-temperature matter near the collision point.  
+        On the other hand, high temperature, low net baryon density regions are achieved at collision energies of $\sqrt{s_{NN}} \gtrsim 100$ [GeV].\@ In this energy regime, the colliding particles do not stop but pass through each other, producing many pair creations. As a result, the baryon number density does not become large relative to the temperature. However, a high energy density region leads to the creation of high-temperature matter near the collision point.  
                
-        In the ALICE experiment, LHC Run 3 operations began in 2022, initiating Pb-Pb collision measurements at $\sqrt{s_{NN}} = 5.36$ TeV.\@ This collision energy produces QGP in the ultrahigh temperature, low-density region. Moreover, compared to the QGP generated at $\sqrt{s_{NN}} = 200$ GeV at RHIC, the higher collision energy at LHC enables the measurement of a larger QGP than ever before.
-    \subsection{Dilepton Measurement\cite{Geurts:2022xmk}}
-        Dilepton measurement is a good probe for investigating the time evolution of heavy-ion collisions. Leptons do not interact with strong interactions, making them less affected by the QGP.\@ This characteristic allows for the measurement of a distribution that sums up dileptons from all stages of heavy-ion collisions. The sources of dilepton production are as follows:     
+        In the ALICE experiment, LHC Run 3 operations began in 2022, initiating Pb-Pb collision measurements at $\sqrt{s_{NN}} = 5.36$ TeV.\@ This collision energy produces QGP in the ultrahigh temperature, low net baryon density region. Moreover, compared to the QGP generated at $\sqrt{s_{NN}} = 200$ GeV at RHIC, the higher collision energy at LHC enables the measurement of a larger QGP than ever before.
+    \subsection{Dilepton Measurement}
+        Dilepton measurement is a good probe for investigating the time evolution of heavy-ion collisions. Leptons do not interact with strong interactions, making them less affected by the QGP.\@ This characteristic allows for the measurement of a distribution that sums up dileptons from all stages of heavy-ion collisions. The sources of dilepton production are as Figure \ref{Intro:Dilepton:dilepton_source}.
         \begin{figure}[hbtp]
             \centering
             \includegraphics[keepaspectratio, scale=0.3]{fig/1_5_dilepton_source.png}
-            \caption{Dilepton source}
+            \caption{Dilepton source\cite{Geurts:2022xmk}}
             \label{Intro:Dilepton:dilepton_source}
         \end{figure}
         
@@ -225,7 +226,7 @@
         \end{figure}      
         In the High-Mass Region, primordial dileptons (Drell-Yan) constitute the continuum component of the mass distribution. It is related to the initial state of the collision. In the Intermediate-Mass Region, thermal dileptons originating from the QGP and continuum components such as open-charm and open-beauty are observed. 
         
-        Finally, in the Low-Mass Region, the Dilepton distribution predominantly derives from light meson decays from the hadronic gas. Most dileptons from hadron decays have longer lifetimes than the QGP.\@ So these mesons observed in this region are mostly from the hadron gas. However, light vector mesons $(\rho, \omega, \phi)$ have extremely short lifetimes. They may be affected by QGP.\@
+        Finally, in the Low-Mass Region, the Dilepton distribution predominantly derives from light meson decays from the hadronic gas. Most dileptons from hadron decays have longer lifetimes than the QGP.\@ So these mesons observed in this region are mostly from the hadron gas. However, light vector mesons $(\rho, \omega, \phi)$ have extremely short lifetimes. The effect of the QGP has been suggested.\@
     \subsection{Search for chiral symmetry restoration in QGP}
         \begin{figure}[hbtp]
             \centering
@@ -233,7 +234,7 @@
             \caption{Low mass vector meson decay in QGP}
             \label{Intro:Search_for_CSR:Low_mass_vector_meson_decay_in_QGP}
         \end{figure}     
-        n the QGP, an ultra-high temperature and high-density state are expected to be realised, leading to $ < \bar{q}q > \sim 0 $ and restoring chiral symmetry. Light vector mesons $(\rho, \omega, \phi)$ serve as probes for the masses of hadrons in the QGP.\@ These particles have short lifetimes and decay channels into dileptons. As shown in Fig.4, their short lifetimes make it possible for them to decay within the QGP, which would otherwise immediately hadronise. Additionally, since they decay exclusively into dileptons, which do not undergo strong interactions with the QGP, the masses of hadrons within the QGP can be measured.  
+        In the QGP, an ultra-high temperature and high-density state are expected to be realised, leading to $ < \bar{q}q > \sim 0 $ and restoring chiral symmetry. Light vector mesons $(\rho, \omega, \phi)$ serve as probes for the masses of hadrons in the QGP.\@ These particles have short lifetimes and decay channels into dileptons. As shown in Figure \ref{Intro:Search_for_CSR:Low_mass_vector_meson_decay_in_QGP}, their short lifetimes make it possible for them to decay within the QGP, which would otherwise immediately hadronise. Additionally, since they decay exclusively into dileptons, which do not undergo strong interactions with the QGP, the masses of hadrons within the QGP can be measured.  
         
         In past experiments, the restoration of chiral symmetry was investigated using dileptons. In the SPS-NA60 experiment, the excess of muon pairs in the low-mass region was reported. However, the excess could also be explained by $\pi + \pi \rightarrow \rho \rightarrow \pi \pi$; thus, it did not serve as definitive evidence of chiral symmetry restoration\cite{NA60}.  
         
