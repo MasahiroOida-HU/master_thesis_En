@@ -1,4 +1,4 @@
-\documentclass[10.5pt,a4paper,titlepage]{article}
+\documentclass[11pt,a4paper,titlepage]{article}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsfonts}
@@ -8,7 +8,7 @@
 \usepackage{combinedgraphics}
 \usepackage{epstopdf}
 \usepackage{bm}
-\usepackage[margin=25truemm]{geometry}
+\usepackage[margin=21truemm]{geometry}
 \usepackage{fancyhdr} % ヘッダー・フッターのカスタマイズ用パッケージ
 \usepackage{titlesec} % セクションのスタイル変更用（オプション）
 \usepackage{caption}
@@ -55,8 +55,31 @@
   \setlength{\headheight}{18.0pt}
   \addtolength{\topmargin}{-4.0pt}
   \setlength{\baselineskip}{1.2\baselineskip}
+  % ---------------------------
+  % 修士論文の表紙
+  % ---------------------------
+  \begin{titlepage}
+    \centering  % すべて中央揃えにする
+    \vspace*{30mm} % 上部余白
 
-    \maketitle
+    {\LARGE Master's thesis} \\[20mm] % "修士論文" の部分を大きく
+    
+    {\LARGE \textbf{Measurement of $\omega$ and $\phi$ meson production via dimuons\\ at forward rapidity in $pp$ collisions at $\sqrt{s}=13.6$ TeV \\ with ALICE}} \\[50mm] % タイトルを強調
+  
+
+
+    {\Large Author : Masahiro Oida} \\[10mm]
+    {\Large Supervisor  : Prof. Kenta Shigaki} \\[5mm] % 指導教員名
+    {\Large Co-Examiner :} \\[5mm] % 指導教員名
+
+    {\large Hiroshima University \\
+    Graduate School of Advanced Science and Engineering \\
+    Physics program}\\[10mm]
+    {\large Affiliation : Quark Physics Laboratory and $\mathrm{SKCM^2}$} \\[5mm]
+
+  \end{titlepage}
+
+%  \maketitle
     \setcounter{tocdepth}{3}
     \tableofcontents
     \newpage

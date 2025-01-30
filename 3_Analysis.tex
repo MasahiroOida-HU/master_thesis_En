@@ -114,7 +114,7 @@
                 \begin{figure}[H]
                     \centering
                     \includegraphics[keepaspectratio, scale=0.5]{fig/3_4_1_CB_pt_1to30.pdf}
-                    \caption{Dimuon invariant mass distribution with transverse momentum $1< p_T <30$ (GeV/c) minus uncorrelated background events. Black is the reconstructed invariant mass distribution for all combinations of muons of different signs in the same event. Blue is the uncorrelated background event estimated using the Like Sign method. Red is the correlated muon vs. invariant mass distribution obtained by subtracting blue from black.}
+                    \caption{Dimuon invariant mass distribution with transverse momentum $1< p_T <30$ (GeV/c) minus uncorrelated background events. Black is the reconstructed invariant mass distribution for all combinations of muons of different signs in the same event. Blue is the uncorrelated background event estimated using the Like Sign method. Red is the correlated muon vs invariant mass distribution obtained by subtracting blue from black.}
                     \label{All_pt_CB}
                 \end{figure}
                 The horizontal axis shows the invariant mass, and the vertical axis shows the number of dimuons for each mass bin. The black distribution represents the invariant mass reconstructed by pairing oppositely charged muon particles from all combinations within the same event, while the blue distribution represents the uncorrelated background events estimated using the Like Sign method. The red distribution, obtained by subtracting the blue from the black one, represents the dimuon invariant mass distribution with correlations.
@@ -159,7 +159,7 @@
                         \includegraphics[width=\textwidth]{fig/3_4_1_CB_pt_6to10.pdf}
                         \caption*{$6 < p_{T\mu\mu} < 10 (\mathrm{GeV/c})$}
                     \end{minipage}
-                    \caption{Dimuon invariant mass distribution subtracting each dimuon transverse momentum uncorrelated background event. Black is the reconstructed invariant mass distribution for all combinations of muons of different signs in the same event. Blue is the uncorrelated background event estimated using the Like Sign method. Red is the correlated muon vs. invariant mass distribution obtained by subtracting blue from black.}
+                    \caption{Dimuon invariant mass distribution subtracting each dimuon transverse momentum uncorrelated background event. Black is the reconstructed invariant mass distribution for all combinations of muons of different signs in the same event. Blue is the uncorrelated background event estimated using the Like Sign method. Red is the correlated muon vs invariant mass distribution obtained by subtracting blue from black.}
                     \label{Analysis:Dimuon:CB:CB_pt_separation}
                 \end{figure}
                 In the region of \(0 < p_{T\mu\mu} < 1\) GeV, no peaks for \(\omega\) and \(\phi\) were observed. The reason is believed to be the insufficient resolution of the single muon \(p_T\) and the dominance of tracks with incorrect MFT-MCH matching.
@@ -244,7 +244,7 @@
                         \captionsetup{labelformat=empty}
                         \caption*{$6 < p_{T\mu\mu} < 10 (\mathrm{GeV/c})$}
                     \end{minipage}
-                    \caption{Results of fitting to the correlated invariant mass distribution obtained from Figure \ref{nalysis:Dimuon:CB:CB_pt_separation} in the region $0.5 < M_{\mu\mu} < 1.3 (\mathrm{GeV/c^2})$. The red line is the result of the global fit with \ref{fit:globalfit}.}
+                    \caption{Results of fitting to the correlated invariant mass distribution obtained from Figure \ref{Analysis:Dimuon:CB:CB_pt_separation} in the region $0.5 < M_{\mu\mu} < 1.3 (\mathrm{GeV/c^2})$. The red line is the result of the global fit with \ref{fit:globalfit}.}
                     \label{Analysis:Dimuon:Yield:fit}
                 \end{figure}
                 The mean mass positions and mass widths of \(\omega\) and \(\phi\) for each transverse momentum, as well as the \(\chi^2\) of the fit, are summarised in the following table.
@@ -297,13 +297,13 @@
         \begin{figure}
             \centering
             \includegraphics[keepaspectratio, scale=0.4]{fig/3_6_CB_pt0to1.pdf}
-            \caption{Combinatorial subtraction of dimuon transverse momentum $0 < p_{T\mu\mu} < 1 (\mathrm{GeV/c})$. Black is the reconstructed invariant mass distribution for all combinations of muons of different signs in the same event. Blue is the uncorrelated background event estimated using the Like Sign method. Red is the correlated muon vs. invariant mass distribution obtained by subtracting blue from black.}
+            \caption{Combinatorial subtraction of dimuon transverse momentum $0 < p_{T\mu\mu} < 1 (\mathrm{GeV/c})$. Black is the reconstructed invariant mass distribution for all combinations of muons of different signs in the same event. Blue is the uncorrelated background event estimated using the Like Sign method. Red is the correlated muon vs invariant mass distribution obtained by subtracting blue from black.}
             \label{Analysis:Dimuon:pt0to1}
         \end{figure}
         The mass distribution of dimuons with \( p_{T\mu\mu} \) below 1 $(\mathrm{GeV/c^2})$, not shown in Figure \ref{Analysis:Dimuon:CB:CB_pt_separation}, is presented here.
         From Figure \ref{Analysis:Dimuon:pt0to1}, the peak structures of \(\omega\) and \(\phi\) could not be measured. This is due to the insufficient reconstruction resolution of \(\eta\), \(p_T\), and \(\phi\) at low \(p_T\) for single muons. The introduction of the MFT is expected to enable high-precision measurements of \(\eta\) and \(\phi\), which would improve the reconstruction resolution of \(p_T\) through enhanced \(\eta\) and \(\phi\) resolution. However, with the current reconstruction method, sufficient resolution has not been achieved, resulting in the inability to observe the peaks of \(\omega\) and \(\phi\) in the dimuon invariant mass distribution at low transverse momentum. This can likely be attributed to issues in matching tracks from the newly introduced MFT and those from the MCH, which prevent achieving adequate resolution. This chapter presents an analysis to improve the MFT-MCH matching purity across all transverse momentum distributions without restricting to low \(p_T\).
 
-        \subsubsection{MFT-MCH matching $\chi^2$ Optimization}
+        \subsubsection{MFT-MCH matching $\chi^2$ optimization}
         \label{matching_chi2_opt}
             Using the yield analysis method for $\omega \rightarrow \mu\mu$ and $\phi \rightarrow \mu\mu$ described in \ref{Analysis:Dimuon:Combinatorial BG subtraction}-\ref{Analysis:Dimuon:Yieldcal}, the MFT-MCH matching \(\chi^2\) cut value for single muon tracks was optimised to maximise signal detection efficiency. The MFT-MCH matching \(\chi^2\) value represents the parameter difference when extrapolating MFT and MCH tracks to the matching plane. A larger \(\chi^2\) value indicates more fake matches, whereas a smaller value corresponds to more correct matches. Fake match tracks can be removed by applying a cut on this value. However, optimising the cut to minimise fake matches while preserving as many correct matches as possible is necessary. In this study, the optimisation was performed by maximising the signal significance using the peaks of \(\omega\) and \(\phi\).
             The signal was calculated by performing the same analysis as in \ref{Analysis:Dimuon:Combinatorial BG subtraction}, \ref{Peak_extraction}, and \ref{Analysis:Dimuon:Yieldcal} for the mass distributions in all transverse momentum regions. The number of background events was determined by counting the entries in the background-subtracted mass distribution within the same mass window used for signal calculation, and this was used as the background estimate. The significance, \( S/\sqrt{S+BG} \), was then calculated. This calculation was performed for mass distributions reconstructed using only muons with an MFT-MCH matching \(\chi^2\) below a given threshold.  
@@ -348,7 +348,7 @@
                     \includegraphics[width=\textwidth]{fig/3_4_4_CB_chi2_200.pdf}
                     \caption*{MFT-MCH matching $\chi^2 < 200$}
                 \end{minipage}
-                \caption{The result of Combinatorial Background subtraction after applying the MFT-MCH matching $\chi^2$ cut. Black is the reconstructed invariant mass distribution for all combinations of muons of different signs in the same event. Blue is the uncorrelated background event estimated using the Like Sign method. Red is the correlated muon vs. invariant mass distribution obtained by subtracting blue from black.}
+                \caption{The result of Combinatorial Background subtraction after applying the MFT-MCH matching $\chi^2$ cut. Black is the reconstructed invariant mass distribution for all combinations of muons of different signs in the same event. Blue is the uncorrelated background event estimated using the Like Sign method. Red is the correlated muon vs invariant mass distribution obtained by subtracting blue from black.}
                 \label{Analysis:Dimuon:Matching_CB}
             \end{figure}
             The black distribution decreases in size by reducing the \(\chi^2\) cut. Additionally, it can be observed that the \(\omega\) and \(\phi\) peaks in the red distribution become more pronounced. Figure \ref{Analysis:Dimuon:Matching_Fit} shows the fitting results for this red distribution.
@@ -391,11 +391,11 @@
                     \includegraphics[width=\textwidth]{fig/3_4_4_Fit_chi2_200.pdf}
                     \caption*{MFT-MCH matching $\chi^2 < 200$}
                 \end{minipage}
-                \caption{Results of fitting to the correlated invariant mass distribution obtained from Figure \ref{Analysis:Dimuon:Matching_CB} in the region $0.5 < M_{\mu\mu} < 1.3 (\mathrm{GeV/c^2})$. The red line is the result of the global fit with (\ref{fit:globalfit}).}
+                \caption{Results of fitting to the correlated invariant mass distribution obtained from Figure \ref{Analysis:Dimuon:Matching_CB} in the region $0.5 < M_{\mu\mu} < 1.3 (\mathrm{GeV/c^2})$. The red line results from the global fit with (\ref{fit:globalfit}).}
                 \label{Analysis:Dimuon:Matching_Fit}
             \end{figure}
             %need addition
-            Figure \ref{fig:oemega_significance} and Figure \ref{fig:phi_significanc} show the $\chi^2$ dependence of \(S/\sqrt{S+BG}\) obtained in the fit.
+            Figure \ref{fig:omega_significance} and Figure \ref{fig:phi_significance} show the $\chi^2$ dependence of \(S/\sqrt{S+BG}\) obtained in the fit.
             The horizontal axis represents the matching \(\chi^2\), while the vertical axis shows \(S/\sqrt{S+BG}\). As the cut value is reduced, the value of \(S/\sqrt{S+BG}\) increases. When a cut of \(\chi^2<30\) is applied, \(S/\sqrt{S+BG}\) reaches its maximum for both \(\omega\) and \(\phi\).\@ From this result, it is evident that the optimal matching \(\chi^2\) value is \(\chi^2<30\).\@
             \begin{figure}[htbp]
                 \centering
@@ -422,7 +422,7 @@
             \begin{figure}[H]
                 \centering
                 \includegraphics[keepaspectratio, scale=0.5]{fig/3_5_6_etacutno_eta.pdf}
-                \caption{$\eta$ distribution of Global Track}
+                \caption{Black is the $\eta$ distribution of Global Track, red is the $\eta$ distribution of correct match tracks, and blue is the $\eta$ distribution of fake match tracks. Moreover, green is the true $\eta$ distribution corresponding to black.}
                 \label{Analysis:Matching:eta}
             \end{figure}
             Figure \ref{Analysis:Matching:eta} shows the \(\eta\) distribution of Global Tracks for all \(p_T\) regions. The black histogram represents the reconstructed \(\eta\) distribution of Global Tracks. The blue histogram corresponds to the \(\eta\) distribution of reconstructed tracks identified as Fake matches, while the red histogram represents the \(\eta\) distribution of correctly matched tracks. The green histogram represents the true \(\eta\) distribution corresponding to the black reconstructed tracks.  
@@ -432,7 +432,7 @@
                 \label{Deltaeta_eq}
                 \Delta \eta = \text{MFT Track} \, \eta - \text{MCH Track} \, \eta  
             \end{eqnarray}
-            For each track, \(\Delta \eta\) was calculated. Fig.\ref{Analysis:Matching:DeltaEta} shows the distribution. The black represents the distribution of reconstructed muons, the blue represents the distribution of Fake match tracks, and the red represents the distribution of Correct match tracks.
+            For each track, \(\Delta \eta\) was calculated. Figure \ref{Analysis:Matching:DeltaEta} shows the distribution. The black represents the distribution of reconstructed muons, the blue represents the distribution of Fake match tracks, and the red represents the distribution of Correct match tracks.
             \begin{figure}[H]
                 \centering
                 \includegraphics[keepaspectratio, scale=0.5]{fig/3_5_6_etacutno_deltaeta.pdf} % 右側の画像
