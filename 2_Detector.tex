@@ -26,7 +26,7 @@
                 \caption{MUON spectrometer}
                 \label{MUONspectrometer}
             \end{figure}
-            The MUON spectrometer is shown in Figure \ref{MUONspectrometer}.The MUON spectrometer consists of the Front Absorber, MCH, Iron Wall, and MID and has an acceptance range of $-4.0 < \eta < -2.5$. It uses the high penetration power of muons to identify them. Various particles generated at the collision point (IP) pass through the Front Absorber. Hadrons and light electrons, which interact strongly, are absorbed by the Front Absorber. The muons pass through it due to their high penetration power. The muons that pass through the Front Absorber are detected, and any particles such as $\pi$ mesons produced from interactions within the Front Absorber are measured by the MCH.\@ These particles are absorbed in the Iron Wall, so the MID does not detect them.\@ Therefore, muon identification is performed by combining tracks measured in the MCH and MID.\@ The momentum of the muons is measured using a dipole magnet in the MCH, which is set at a magnetic flux density of 3.0 $T/m^2$.\@
+            The MUON spectrometer is shown in Figure \ref{MUONspectrometer}\cite{Muon_TDR}.The MUON spectrometer consists of the Front Absorber, MCH, Iron Wall, and MID and has an acceptance range of $-4.0 < \eta < -2.5$. It uses the high penetration power of muons to identify them. Various particles generated at the collision point (IP) pass through the Front Absorber. Hadrons and light electrons, which interact strongly, are absorbed by the Front Absorber. The muons pass through it due to their high penetration power. The muons that pass through the Front Absorber are detected, and any particles such as $\pi$ mesons produced from interactions within the Front Absorber are measured by the MCH.\@ These particles are absorbed in the Iron Wall, so the MID does not detect them.\@ Therefore, muon identification is performed by combining tracks measured in the MCH and MID.\@ The momentum of the muons is measured using a dipole magnet in the MCH, which is set at a magnetic flux density of 3.0 $T/m^2$.\@
         \subsubsection{MFT}
             \begin{figure}[htbp]
                 \centering
@@ -34,15 +34,14 @@
                 \caption{MFT}
                 \label{MFT}
             \end{figure}
-            The MFT is a newly introduced silicon pixel detector in Run 3, installed between $z=0$ and $z=-76.8$ cm (with an acceptance range of $-3.6 < \eta < -2.5$). It consists of 5 layers of disks that detect tracks and reconstruct MFT standalone tracks considering the influence of the L3 magnet, which creates the ALICE central magnetic field. Since the detector is placed in front of the Front Absorber, the tracks measured include muons and various other particles such as $\pi$ mesons and kaons. Combining these tracks with those measured by the backward MUON spectrometer makes it possible to measure the DCA of the muons. The ability to measure DCA enables the separation of c and b quarks based on differences in lifetime. Additionally, the precision of the opening angle of the muon pair is improved, which enhances mass resolution. Furthermore, since the MFT is placed in front of the Front Absorber, it allows for the measurement of lower transverse momentum muons compared to those measured by the MUON spectrometer alone.
-            %ここまで確認済み-01/30 19:30%
+            The MUON spectrometer is shown in Figure \ref{MFT}\cite{MFT_TDR}. The MFT is a newly installed silicon pixel detector between $z=-46.0$ and $z=-76.8$ cm with an acceptance range of $-3.6 < \eta < -2.5$ in Run 3. It consists of 5 layers of disks that detect tracks and reconstruct MFT standalone tracks considering the influence of the L3 magnet, which creates the ALICE central magnetic field. Since the detector is placed in front of the Front Absorber, the tracks measured include muons and various other particles such as $\pi$ mesons and $K$ mesons. Combining these tracks with those measured by the backward MUON spectrometer makes it possible to measure the $DCA$ of the muons. The ability to measure $DCA$ enables the separation of muons from $c$ and $b$ quarks based on differences in lifetime. Additionally, the precision of the opening angle of the muon pair is improved, which enhances mass resolution. Furthermore, since the MFT is placed in front of the Front Absorber, it allows for the measurement of lower transverse momentum muons compared to those measured by the MUON spectrometer alone.
 
         \subsubsection{MFT-MUON Track Matching}\label{MFT-MUON_matching}
-            The tracks measured by the MUON spectrometer and MFT are matched to reconstruct the Global Track. First, the tracks measured by the MUON spectrometer are extrapolated toward the collision point up to the last disk of the MFT, located at $z=76.8$ cm. The extrapolation accounts for multiple scattering and energy loss corrections in the hadron absorber between the MUON spectrometer and MFT.\@ Then, suitable MFT tracks are selected based on both position and direction, and the matching quality is evaluated by comparing the position and slope of the tracks. The best quality MFT track is selected and used to construct the Global Track.
-            \begin{figure}[htbp]
-                \centering
-                \includegraphics[keepaspectratio, scale=0.3]{fig/2_2_3_GlobalTrackReco.png}
-                \caption{Global Track\cite{MFT_TDR}}
-                \label{GlobalTrackReco}
-            \end{figure}
-            %カルマンフィルターの説明
+            The Global Track was reconstructed using the MCH Track measured with the MUON spectrometer and the MFT Track measured with the MFT. First, the MCH Tracks measured by the MUON spectrometer are extrapolated toward the collision point up to the last disk of the MFT, located at $z=76.8$ cm. The extrapolation accounts for multiple scattering and energy loss corrections in the Front Absorber between the MUON spectrometer and MFT.\@ Then, suitable MFT tracks are selected based on both position and direction, and the matching quality is evaluated by comparing the position and slope of the tracks. The best quality MFT track is selected and used to construct the Global Track.
+            %begin{figure}[htbp]
+            %    \centering
+            %    \includegraphics[keepaspectratio, scale=0.3]{fig/2_2_3_GlobalTrackReco.png}
+            %    \caption{Global Track\cite{MFT_TDR}}
+             %   \label{GlobalTrackReco}
+            %\end{figure}
+            %MUON spectrometerで測定したMCH TrackとMFTでで測定したMFT Trackを用いてGlobal Trackを再構成した。
