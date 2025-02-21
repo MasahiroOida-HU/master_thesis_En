@@ -2,19 +2,19 @@
 \label{Analysis}
     \subsection{DataSet}
     \label{DataSet}
-        The data used is a part of $pp$ collisions at $\sqrt{s}=13.6$ TeV obtained in 2022. The collision rate of $pp$ is $500$ kHz, and the dataset name is LHC22o$\_$apass7.
-        The Monte Carlo simulation data used in \ref{Analysis:Matching} utilized Pythia8 Monash to reproduce 500 kHz $pp$ collisions at $\sqrt{s}=13.6$ TeV, employing minimum bias event simulations without extracting specific events.
+        The data used is a subset of $pp$ collisions at $\sqrt{s} = 13.6$ TeV, collected in 2022. The collision rate for $pp$ is $500$ kHz, and the dataset is labeled LHC22o$\_$apass7.
+        The Monte Carlo simulation data used in \ref{Analysis:Matching} employs Pythia8 Monash to reproduce $500$ kHz $pp$ collisions at $\sqrt{s} = 13.6$ TeV, utilizing minimum bias event simulations without extracting specific events.
         
     \subsection{Event selection}
     \label{Event_selection}
-        The ITS detector system measured the position of the proton-proton collision. The Z-coordinate of the collision point, denoted as VtxZ, was selected with the condition $|VtxZ| < 10$ cm, using the ITS centre at Z = 0 as the reference. This cut value is adjusted with the ITS acceptance. The number of events obtained with this cut is $5.5 \times 10^9$.\@
+        The ITS detector system measured the position of the proton-proton collision. The Z-coordinate of the collision point, denoted as VtxZ, was selected with the condition $|VtxZ| < 10$ cm, using the ITS centre at Z = 0 as the reference. This cut value is adjusted based on the ITS acceptance. The number of events obtained after applying this cut is $5.5 \times 10^9$.\@
 
     \subsection{Single muon track reconstruction}
     \label{Single_reco}
-        The Global Track reconstructed in \ref{MFT-MUON_matching} was used to calculate the physical quantities of the muon as follows. The MFT Track measures the muon's $\eta$ and $\phi$. The momentum $p$ was derived by propagating the MCH standalone track to the Z-coordinate of the collision point, with corrections applied for multiple scattering and energy loss in the absorber.
-        For the $DCA$, a global fit was performed for all tracks constituting the Global Track, and the resulting track was used. 
-        As shown in Figure \ref{Analysis:reco:DCA}, the track was linearly extrapolated to the Z-coordinate of the collision point (IP), and the distance between the extrapolated point and the collision point was calculated as the $DCA$. Similarly, using the same track, $R_{abs}$ was calculated as the distance from the beam axis at the back edge of the absorber, as shown in Figure \ref{Analysis:reco:R_abs}.\@
-        Furthermore, the MFT-MCH matching $\chi^2$ was calculated based on the parameter differences when extrapolating the MFT Track and MCH Track to the matching plane.
+        The Global Track, reconstructed in \ref{MFT-MUON_matching}, was used to calculate the physical quantities of the muon as follows. The MFT track measures the muon's $\eta$ and $\phi$. The momentum $p$ was derived by propagating the MCH standalone track to the Z-coordinate of the collision point, with corrections applied for multiple scattering and energy loss in the absorber.
+        For the $DCA$, a global fit was performed for all tracks constituting the Global Track, and the resulting track was used.
+        As shown in Figure \ref{Analysis:reco:DCA}, the track was linearly extrapolated to the Z-coordinate of the collision point (IP), and the distance between the extrapolated point and the collision point was calculated as the $DCA$. Similarly, using the same track, $R_{abs}$ was calculated as the distance from the beam axis at the back edge of the absorber, as shown in Figure \ref{Analysis:reco:R_abs}.
+        Furthermore, the MFT-MCH matching $\chi^2$ was calculated based on the parameter differences when extrapolating both the MFT track and MCH track to the matching plane.
         \begin{figure}[htbp]
             % Left figure
             \begin{minipage}{0.45\textwidth} % Specifying the width with minipage
@@ -42,11 +42,7 @@
             \item $pDCA$ < 6$\sigma$
             \item MFT-MCH matching $\chi^2$ < 30
         \end{itemize}
-        The $\eta$ cut is adjusted to match the MFT-MHC-MID acceptance. 
-        The cut value of $R_{abs}$ removes tracks of values where hadron absorbers are not present.
-        The $pDCA$ is the momentum multiplied by $DCA$, and this cut value removes muons derived from the beam gas. The cut was applied at 6$sigma$ when Gaussian-fitted to the $pDCA$ distribution.
-        MFT-MCH matching $\chi^2$ values, optimised to a value that minimise the statistical error of the $\omega$ and $\phi$ yield as described below.
-        The final MFT-MCH matching $\chi^2$ values are obtained from a fit using the points detected when matching MFT and MCH tracks. The values used in this study are optimised to minimise the statistical uncertainty in the $\omega$ and $\phi$ yields, as discussed \ref{matching_chi2_opt}.
+        The $\eta$ cut is adjusted to match the MFT-MCH-MID acceptance. The cut value of $R_{abs}$ is chosen to remove tracks in regions where hadron absorbers are not present. The $pDCA$, defined as the product of momentum and $DCA$, is used to eliminate muons originating from beam-gas interactions. The cut was applied at 6$\sigma$ based on a Gaussian fit to the $pDCA$ distribution. The MFT-MCH matching $\chi^2$ value was optimized to minimize the statistical uncertainty in the $\omega$ and $\phi$ yields, as described below. The MFT-MCH matching $\chi^2$ values were obtained from a fit to the data points detected when matching MFT and MCH tracks. The values used in this study were optimized to minimize the statistical uncertainty in the $\omega$ and $\phi$ yields, as discussed in \ref{matching_chi2_opt}.
     
         \subsection{Dimuon analysis}
         \label{Dimuon}
@@ -101,8 +97,7 @@
                 
             \subsubsection{Combinatorial background subtraction}
             \label{Analysis:Dimuon:Combinatorial BG subtraction}
-                The dimuon was reconstructed by pairing oppositely charged muons present in each event. In cases with multiple combinations, all combinations are used to pair the muons and reconstruct the physical quantities of the dimuon. Since all combinations are considered, the mass distribution of uncorrelated muon pairs is also reconstructed. This is called the combinatorial background. This study uses the Like Sign method to subtract the combinatorial background. The Like Sign method is a method that estimates the combinatorial background by using the mass distribution of muon pairs with the same sign from each collision event. The key feature of this method is that it estimates the shape of uncorrelated background events using the like-sign muons from the same event, allowing for the subtraction of mass distributions of weakly correlated particles within each event, such as those arising from elliptic flow in heavy-ion collisions. The estimated uncorrelated background events depend on the $p_T$ of the dimuon.
-                The calculation formula is given by (\ref{LikeSignMethod}).
+                The dimuon was reconstructed by pairing oppositely charged muons within each event. In cases with multiple possible pairings, all combinations were considered to reconstruct the physical quantities of the dimuon. Since all combinations are included, the mass distribution of uncorrelated muon pairs is also reconstructed. This component is referred to as the combinatorial background. This study employs the Like-Sign method to subtract the combinatorial background. The Like-Sign method estimates the combinatorial background using the mass distribution of same-sign muon pairs from each collision event. A key feature of this method is that it estimates the shape of the uncorrelated background using like-sign muons from the same event, enabling the subtraction of mass distributions associated with weakly correlated particles, such as those influenced by elliptic flow in heavy-ion collisions. The estimated uncorrelated background depends on the $p_T$ of the dimuon. The calculation formula is given in (\ref{LikeSignMethod}).
                 \begin{eqnarray}
                     \label{LikeSignMethod}
                     \dv{N_{sig}}{m} &=& \dv{N_{same}^{+-}}{m} - 2R \sqrt{\dv{N_{same}^{++}}{m} \dv{N_{same}^{--}}{m}}\\
@@ -110,64 +105,62 @@
                 \end{eqnarray}
                 Where, $\dv{N_{sig}}{m}$ represents the number of correlated muons at each mass, $\dv{N_{same}^{**}}{m}$ represents the number of same-sign muon pairs in the same event (** corresponds to the muon sign), and $\dv{N_{mix}^{**}}{m}$ represents the number of muon pairs formed from different events. $R$ is a term to correct for the acceptance difference due to the muon sign. $R = 1$ when there is no difference in acceptances by sign. Since muon pairs from different events were not reconstructed in this analysis, $R = 1$ was used for the calculation.
 
-                The result of the combinatorial background subtraction in the dimuon transverse momentum region of (1 < $p_{T\mu\mu}$ < 30) $\mathrm{GeV/c}$ is shown in Figure \ref{All_pt_CB}.
+                The result of the combinatorial background subtraction in the dimuon transverse momentum region of 1 < $p_{T\mu\mu}$ < 30 $\mathrm{GeV}/c$ is shown in Figure \ref{All_pt_CB}.
                 \begin{figure}[H]
                     \centering
                     \includegraphics[keepaspectratio, scale=0.5]{fig/3_4_1_CB_pt_1to30.pdf}
-                    \caption{Dimuon invariant mass distribution with transverse momentum $1< p_T <30$ (GeV/c) minus uncorrelated background events. Black is the reconstructed invariant mass distribution for all combinations of muons of different signs in the same event. Blue is the uncorrelated background event estimated using the Like Sign method. Red is the correlated muon vs invariant mass distribution obtained by subtracting blue from black.}
+                    \caption{Dimuon invariant mass distribution with transverse momentum $1< p_T <30$ $\mathrm{GeV}/c$ minus uncorrelated background events. Black is the reconstructed invariant mass distribution for all combinations of muons of different signs in the same event. Blue is the uncorrelated background event estimated using the Like Sign method. Red is the correlated muon vs invariant mass distribution obtained by subtracting blue from black.}
                     \label{All_pt_CB}
                 \end{figure}
-                The horizontal axis shows the invariant mass, and the vertical axis shows the number of dimuons for each mass bin. The black distribution represents the invariant mass reconstructed by pairing oppositely charged muon particles from all combinations within the same event, while the blue distribution represents the uncorrelated background events estimated using the Like Sign method. The red distribution, obtained by subtracting the blue from the black one, represents the dimuon invariant mass distribution with correlations.
-                The mass distributions were separated by dimuon $p_{T\mu\mu}$, and uncorrelated background events were subtracted using the Like Sign method in each invariant mass distribution to examine the transverse momentum dependence of the $\omega$ and $\phi$ yields. The subtracted plots are shown in Figure \ref{Analysis:Dimuon:CB:CB_pt_separation}.
-
+                The horizontal axis represents the invariant mass, while the vertical axis indicates the number of dimuons per mass bin. The black distribution represents the invariant mass spectrum reconstructed by pairing oppositely charged muons from all possible combinations within the same event, while the blue distribution denotes the uncorrelated background estimated using the Like-Sign method. The red distribution, obtained by subtracting the blue from the black, represents the correlated dimuon invariant mass spectrum. The mass spectra were categorized by dimuon \( p_{T\mu\mu} \), and the uncorrelated background was subtracted using the Like-Sign method in each spectrum to investigate the transverse momentum dependence of the \( \omega \) and \( \phi \) yields. Figure \ref{Analysis:Dimuon:CB:CB_pt_separation} presents the subtracted spectra.
                 \begin{figure}[H]
                     \centering
                     \begin{minipage}{0.45\textwidth}
                         \centering
                         \includegraphics[width=\textwidth]{fig/3_4_1_CB_pt_1to2.pdf}
-                        \caption*{$1 < p_{T\mu\mu} < 2 (\mathrm{GeV/c})$}
+                        \caption*{$1 < p_{T\mu\mu} < 2\ \mathrm{GeV}/c$}
                     \end{minipage}
                     \hfill
                     \begin{minipage}{0.45\textwidth}
                         \centering
                         \includegraphics[width=\textwidth]{fig/3_4_1_CB_pt_2to3.pdf}
-                        \caption*{$2 < p_{T\mu\mu} < 3 (\mathrm{GeV/c})$}
+                        \caption*{$2 < p_{T\mu\mu} < 3\ \mathrm{GeV}/c$}
                     \end{minipage}
                     \\
                     \vspace{1em}
                     \begin{minipage}{0.45\textwidth}
                         \centering
                         \includegraphics[width=\textwidth]{fig/3_4_1_CB_pt_3to4.pdf}
-                        \caption*{$3 < p_{T\mu\mu} < 4 (\mathrm{GeV/c})$}
+                        \caption*{$3 < p_{T\mu\mu} < 4\ \mathrm{GeV}/c$}
                     \end{minipage}
                     \hfill
                     \begin{minipage}{0.45\textwidth}
                         \centering
                         \includegraphics[width=\textwidth]{fig/3_4_1_CB_pt_4to5.pdf}
-                        \caption*{$4 < p_{T\mu\mu} < 5 (\mathrm{GeV/c})$}
+                        \caption*{$4 < p_{T\mu\mu} < 5\ \mathrm{GeV}/c$}
                     \end{minipage}
                     \\
                     \vspace{1em}
                     \begin{minipage}{0.45\textwidth}
                         \centering
                         \includegraphics[width=\textwidth]{fig/3_4_1_CB_pt_5to6.pdf}
-                        \caption*{$5 < p_{T\mu\mu} < 6 (\mathrm{GeV/c})$}
+                        \caption*{$5 < p_{T\mu\mu} < 6\ \mathrm{GeV}/c$}
                     \end{minipage}
                     \hfill
                     \begin{minipage}{0.45\textwidth}
                         \centering
                         \includegraphics[width=\textwidth]{fig/3_4_1_CB_pt_6to10.pdf}
-                        \caption*{$6 < p_{T\mu\mu} < 10 (\mathrm{GeV/c})$}
+                        \caption*{$6 < p_{T\mu\mu} < 10\ \mathrm{GeV/c}$}
                     \end{minipage}
                     \caption{Dimuon invariant mass distribution subtracting each dimuon transverse momentum uncorrelated background event. Black is the reconstructed invariant mass distribution for all combinations of muons of different signs in the same event. Blue is the uncorrelated background event estimated using the Like Sign method. Red is the correlated muon vs invariant mass distribution obtained by subtracting blue from black.}
                     \label{Analysis:Dimuon:CB:CB_pt_separation}
                 \end{figure}
-                In the region of \(0 < p_{T\mu\mu} < 1\) GeV, no peaks for \(\omega\) and \(\phi\) were observed. The reason is believed to be the insufficient resolution of the single muon \(p_T\) and the dominance of tracks with incorrect MFT-MCH matching.
-                The region of \(6 < p_{T\mu\mu} < 10\) GeV was chosen to be wider than other transverse momentum regions to preserve the statistical significance.
+                In the region \(0 < p_{T\mu\mu} < 1\) $\mathrm{GeV}/c$, no peaks of \(\omega\) and \(\phi\) were observed. The reason is believed to be the insufficient resolution of the single muon \(p_T\) and the dominance of tracks with incorrect MFT-MCH matching.
+                The region of \(6 < p_{T\mu\mu} < 10\) $\mathrm{GeV}/c$ was chosen to be wider than other transverse momentum regions to preserve the statistical significance.
         
             \subsubsection{Peak extraction of $\omega \rightarrow \mu\mu ,\phi \rightarrow \mu\mu$}
             \label{Peak_extraction}
-                The distributions of the correlated dimuon invariant mass obtained from \ref{Analysis:Dimuon:Combinatorial BG subtraction} are used to extract the distributions of $\omega \rightarrow \mu\mu$ and $\phi \rightarrow \mu\mu$. The dimuon invariant mass distribution under 2($\mathrm{GeV/c^2}$) contains pairs of muons coming from light and open heavy-flavor mesons. Charm($c$) and bottom($b$) quarks have heavy masses produced through pair creation in the initial collision. The pair-created \(c\bar{c}\) quarks separate and form \(D\bar{D}\) mesons. The \(D\) and \(\bar{D}\) mesons undergo semileptonic decays, such as \(D \rightarrow \bar{K}^0 + \mu^+ + \nu_\mu\) or \(D \rightarrow \mu^+ + \nu_\mu\), and \(\bar{D} \rightarrow K^0 + \mu^- + \nu_\mu\) or \(\bar{D} \rightarrow \mu^- + \nu_\mu\). Since the parent \(D\) and \(\bar{D}\) mesons are produced through pair creation, they are strongly correlated, and their decay products, the muons, also exhibit correlation. As a result, the dimuon mass distribution with correlations is included. The same correlation applies in the case of \(B\) mesons.
+                The distributions of the correlated dimuon invariant mass obtained from \ref{Analysis:Dimuon:Combinatorial BG subtraction} are used to extract the distributions of $\omega \rightarrow \mu\mu$ and $\phi \rightarrow \mu\mu$. The dimuon invariant mass distribution under 2($\mathrm{GeV/}c^2$) contains pairs of muons coming from light and open heavy-flavor mesons. Charm($c$) and bottom($b$) quarks have heavy masses produced through pair creation in the initial collision. The pair-created \(c\bar{c}\) quarks separate and form \(D\bar{D}\) mesons. The \(D\) and \(\bar{D}\) mesons undergo semileptonic decays, such as \(D \rightarrow \bar{K}^0 + \mu^+ + \nu_\mu\) or \(D \rightarrow \mu^+ + \nu_\mu\), and \(\bar{D} \rightarrow K^0 + \mu^- + \nu_\mu\) or \(\bar{D} \rightarrow \mu^- + \nu_\mu\). Since the parent \(D\) and \(\bar{D}\) mesons are produced through pair creation, they are strongly correlated, and their decay products, the muons, also exhibit correlation. As a result, the dimuon mass distribution with correlations is included. The same correlation applies in the case of \(B\) mesons.
                 \begin{itemize}
                     \item $\eta \rightarrow \mu^+ \mu^-$
                     \item $\eta \rightarrow \mu^+ \mu^- \gamma$
@@ -179,20 +172,20 @@
                     \item $c\bar{c} \rightarrow D\bar{D} \rightarrow \mu^+ \mu^- + others$
                     \item $b\bar{b} \rightarrow B\bar{B} \rightarrow \mu^+ \mu^- + others$
                 \end{itemize}
-                The decays \(\omega \rightarrow \mu\mu\) and \(\phi \rightarrow \mu\mu\) are known to exhibit sharp peak structures from previous lepton pair measurements, forming peaks near 0.8 \(\mathrm{GeV/c^2}\) and 1.0 \(\mathrm{GeV/c^2}\) in the mass distribution.
-                It is known that no sharp peak structures exist for any decays other than the two-body decays of \(\omega\) and \(\phi\). Therefore, the continuous component was fitted using an exponential function. The fitting was performed in the range of 0.5 < \(M_{\mu\mu}\) < 1.3 \(\mathrm{GeV/c^2}\), excluding the regions with peak structures at 0.7 < \(M_{\mu\mu}\) < 0.86 and 0.92 < \(M_{\mu\mu}\) < 1.15. The continuous component was fitted using the exponential function shown (\ref{fit:BG}).
+                The decays \(\omega \rightarrow \mu\mu\) and \(\phi \rightarrow \mu\mu\) are known to exhibit sharp peak structures from previous lepton pair measurements, forming peaks near 0.8 \(\mathrm{GeV/}c^2\) and 1.0 \(\mathrm{GeV/}c^2\) in the mass distribution.
+                It is known that no sharp peak structures exist for any decays other than the two-body decays of \(\omega\) and \(\phi\). Therefore, the continuous component was fitted using an exponential function. The fitting was performed in the range of 0.5 < \(M_{\mu\mu}\) < 1.3 \(\mathrm{GeV/}c^2\), excluding the regions with peak structures at 0.7 < \(M_{\mu\mu}\) < 0.86 and 0.92 < \(M_{\mu\mu}\) < 1.15. The continuous component was fitted using the exponential function shown (\ref{fit:BG}).
                 \begin{eqnarray}
                     \label{fit:BG}
                     f_{BG}(m)=N_{BG}*\exp{-p1* m}
                 \end{eqnarray}
-                where, \(N_{BG}\) and \(p1\) are the fit parameters. The continuous component mass distribution was subtracted using the results from the fit. Gaussian fits were performed for the \(\omega\) and \(\phi\) in the mass regions 0.7 < \(M_{\mu\mu}\) < 0.86 \(\mathrm{GeV/c^2}\) and 0.92 < \(M_{\mu\mu}\) < 1.15 \(\mathrm{GeV/c^2}\), respectively. The fitting function is given by (\ref{fit:omega}) and (\ref{fit:phi}).
+                where, \(N_{BG}\) and \(p1\) are the fit parameters. The continuous component mass distribution was subtracted using the results from the fit. Gaussian fits were performed for the \(\omega\) and \(\phi\) in the mass regions 0.7 < \(M_{\mu\mu}\) < 0.86 \(\mathrm{GeV}/c^2\) and 0.92 < \(M_{\mu\mu}\) < 1.15 \(\mathrm{GeV}/c^2\), respectively. The fitting function is given by (\ref{fit:omega}) and (\ref{fit:phi}).
                 \begin{eqnarray}
                     \label{fit:omega}
                     f_{\omega} &=& N_{\omega}*\exp{-\frac{1}{2}\qty(\frac{m-M_{\omega}}{\sigma_{\omega}})^2}\\\
                     \label{fit:phi}
                     f_{\phi} &=& N_{\phi}*\exp{-\frac{1}{2}\qty(\frac{m-M_{\phi}}{\sigma_{\phi}})^2}
                 \end{eqnarray}
-                The fit parameters are \(N_{\omega}, N_{\phi}, M_{\omega}, M_{\phi}, \sigma_{\omega}, \sigma_{\phi}\). Specifically, \(M_{\omega}\) and \(M_{\phi}\) correspond to the mean mass positions of \(\omega\) and \(\phi\), while \(\sigma_{\omega}\) and \(\sigma_{\phi}\) correspond to the mass widths. Using the fit parameters obtained from the continuous component and the Gaussian fits for \(\omega\) and \(\phi\), all functions were combined, and a global fit was performed to extract the mean mass positions and mass widths of \(\omega\) and \(\phi\). The fit range is 0.5 < \(M_{\mu\mu}\) < 1.3 \(\mathrm{GeV/c^2}\). The function for the overall fit is given by the (\ref{fit:globalfit}).
+                The fit parameters are \(N_{\omega}, N_{\phi}, M_{\omega}, M_{\phi}, \sigma_{\omega}, \sigma_{\phi}\). Specifically, \(M_{\omega}\) and \(M_{\phi}\) correspond to the mean mass positions of \(\omega\) and \(\phi\), while \(\sigma_{\omega}\) and \(\sigma_{\phi}\) correspond to the mass widths. Using the fit parameters obtained from the continuous component and the Gaussian fits for \(\omega\) and \(\phi\), all functions were combined, and a global fit was performed to extract the mean mass positions and mass widths of \(\omega\) and \(\phi\). The fit range is 0.5 < \(M_{\mu\mu}\) < 1.3 \(\mathrm{GeV}/c^2\). The function for the overall fit is given by the (\ref{fit:globalfit}).
                 \begin{eqnarray}
                     \label{fit:globalfit}
                     f(m)=N_{BG}*\exp{-p1* m}+N_{\omega}*\exp{-\frac{1}{2}\qty(\frac{m-M_{\omega}}{\sigma_{\omega}})^2}+N_{\phi}*\exp{-\frac{1}{2}\qty(\frac{m-M_{\phi}}{\sigma_{\phi}})^2}
@@ -204,14 +197,14 @@
                         \centering
                         \includegraphics[width=\textwidth]{fig/3_4_2_fit_pt_1to2.pdf}
                         \captionsetup{labelformat=empty}
-                        \caption*{$1 < p_{T\mu\mu} < 2 (\mathrm{GeV/c})$}
+                        \caption*{$1 < p_{T\mu\mu} < 2\ \mathrm{GeV}/c$}
                     \end{minipage}
                     \hfill
                     \begin{minipage}{0.45\textwidth}
                         \centering
                         \includegraphics[width=\textwidth]{fig/3_4_2_fit_pt_2to3.pdf}
                         \captionsetup{labelformat=empty}
-                        \caption*{$2 < p_{T\mu\mu} < 3 (\mathrm{GeV/c})$}
+                        \caption*{$2 < p_{T\mu\mu} < 3\ \mathrm{GeV}/c$}
                     \end{minipage}
                     \\
                     \vspace{1em}
@@ -219,14 +212,14 @@
                         \centering
                         \includegraphics[width=\textwidth]{fig/3_4_2_fit_pt_3to4.pdf}
                         \captionsetup{labelformat=empty}
-                        \caption*{$3 < p_{T\mu\mu} < 4 (\mathrm{GeV/c})$}
+                        \caption*{$3 < p_{T\mu\mu} < 4\ \mathrm{GeV}/c$}
                     \end{minipage}
                     \hfill
                     \begin{minipage}{0.45\textwidth}
                         \centering
                         \includegraphics[width=\textwidth]{fig/3_4_2_fit_pt_4to5.pdf}
                         \captionsetup{labelformat=empty}
-                        \caption*{$4 < p_{T\mu\mu} < 5 (\mathrm{GeV/c})$} 
+                        \caption*{$4 < p_{T\mu\mu} < 5\ \mathrm{GeV}/c$} 
     
                     \end{minipage}
                     \\
@@ -235,22 +228,22 @@
                         \centering
                         \includegraphics[width=\textwidth]{fig/3_4_2_fit_pt_5to6.pdf}
                         \captionsetup{labelformat=empty}
-                        \caption*{$5 < p_{T\mu\mu} < 6 (\mathrm{GeV/c})$}
+                        \caption*{$5 < p_{T\mu\mu} < 6\ \mathrm{GeV}/c$}
                     \end{minipage}
                     \hfill
                     \begin{minipage}{0.45\textwidth}
                         \centering
                         \includegraphics[width=\textwidth]{fig/3_4_2_fit_pt_6to10.pdf}
                         \captionsetup{labelformat=empty}
-                        \caption*{$6 < p_{T\mu\mu} < 10 (\mathrm{GeV/c})$}
+                        \caption*{$6 < p_{T\mu\mu} < 10\ \mathrm{GeV}/c$}
                     \end{minipage}
-                    \caption{Results of fitting to the correlated invariant mass distribution obtained from Figure \ref{Analysis:Dimuon:CB:CB_pt_separation} in the region $0.5 < M_{\mu\mu} < 1.3 (\mathrm{GeV/c^2})$. The red line is the result of the global fit with \ref{fit:globalfit}.}
+                    \caption{Results of fitting to the correlated invariant mass distribution obtained from Figure \ref{Analysis:Dimuon:CB:CB_pt_separation} in the region $0.5 < M_{\mu\mu} < 1.3 \mathrm{GeV}/c^2$. The red line is the result of the global fit with \ref{fit:globalfit}.}
                     \label{Analysis:Dimuon:Yield:fit}
                 \end{figure}
                 The mean mass positions and mass widths of \(\omega\) and \(\phi\) for each transverse momentum, as well as the \(\chi^2\) of the fit, are summarised in the following table.
                     \begin{table}[htbp]
                         \centering
-                        \caption{Result of fit at each transverse momentum. mean mass mass width unit is $(\mathrm{GeV/c^2})$. Unit of transverse momentum is $(\mathrm{GeV/c})$.}
+                        \caption{Result of fit at each transverse momentum. mean mass mass width unit is $\mathrm{GeV}/c^2$. Unit of transverse momentum is $\mathrm{GeV}/c$.}
                         \resizebox{\textwidth}{!}{
                             \begin{tabular}{|c||c|c|c|c|c|}
                                 \hline
@@ -277,7 +270,7 @@
             The yields for each were calculated using the mean mass positions and mass widths of \(\omega \rightarrow \mu\mu\) and \(\phi \rightarrow \mu\mu\) obtained from the above fit. The mass distribution was obtained by subtracting the continuous component from the dimuon mass distribution with correlations. For this mass distribution, the number of entries within three times the mass width from the mass positions of \(\omega\) and \(\phi\) were calculated as their respective yields. The calculation formula is as (\ref{Yield:calculation}), where the mass distribution after subtracting the continuous component is denoted as \(N_n(m)\).
             \begin{table}[htbp]
                 \centering
-                \caption{Calculated results for $\omega$ and $\phi$ yields. The unit of transverse momentum is $(\mathrm{GeV/c})$.}
+                \caption{Calculated results for $\omega$ and $\phi$ yields. The unit of transverse momentum is $\mathrm{GeV}/c$.}
                 \begin{tabular}{|c||c|c|}
                     \hline
                     & $\omega$ Yield & $\phi$ Yield \\ \hline \hline
@@ -297,17 +290,17 @@
         \begin{figure}
             \centering
             \includegraphics[keepaspectratio, scale=0.4]{fig/3_6_CB_pt0to1.pdf}
-            \caption{Combinatorial subtraction of dimuon transverse momentum $0 < p_{T\mu\mu} < 1 (\mathrm{GeV/c})$. Black is the reconstructed invariant mass distribution for all combinations of muons of different signs in the same event. Blue is the uncorrelated background event estimated using the Like Sign method. Red is the correlated muon vs invariant mass distribution obtained by subtracting blue from black.}
+            \caption{Combinatorial subtraction of dimuon transverse momentum $0 < p_{T\mu\mu} < 1 \mathrm{GeV}/c$. Black is the reconstructed invariant mass distribution for all combinations of muons of different signs in the same event. Blue is the uncorrelated background event estimated using the Like Sign method. Red is the correlated muon vs invariant mass distribution obtained by subtracting blue from black.}
             \label{Analysis:Dimuon:pt0to1}
         \end{figure}
-        The mass distribution of dimuons with \( p_{T\mu\mu} \) below 1 $(\mathrm{GeV/c^2})$, not shown in Figure \ref{Analysis:Dimuon:CB:CB_pt_separation}, is presented here.
-        From Figure \ref{Analysis:Dimuon:pt0to1}, the peak structures of \(\omega\) and \(\phi\) could not be measured. This is due to the insufficient reconstruction resolution of \(\eta\), \(p_T\), and \(\phi\) at low \(p_T\) for single muons. The introduction of the MFT is expected to enable high-precision measurements of \(\eta\) and \(\phi\), which would improve the reconstruction resolution of \(p_T\) through enhanced \(\eta\) and \(\phi\) resolution. However, with the current reconstruction method, sufficient resolution has not been achieved, resulting in the inability to observe the peaks of \(\omega\) and \(\phi\) in the dimuon invariant mass distribution at low transverse momentum. This can likely be attributed to issues in matching tracks from the newly introduced MFT and those from the MCH, which prevent achieving adequate resolution. This chapter presents an analysis to improve the MFT-MCH matching purity across all transverse momentum distributions without restricting to low \(p_T\).
+        %The mass distribution of dimuons with \( p_{T\mu\mu} \) below 1 $(\mathrm{GeV/}c^2)$, not shown in Figure \ref{Analysis:Dimuon:CB:CB_pt_separation}, is presented here. From Figure \ref{Analysis:Dimuon:pt0to1}, the peak structures of \(\omega\) and \(\phi\) could not be measured. This is due to the insufficient reconstruction resolution of \(\eta\), \(p_T\), and \(\phi\) at low \(p_T\) for single muons. The introduction of the MFT is expected to enable high-precision measurements of \(\eta\) and \(\phi\), which would improve the reconstruction resolution of \(p_T\) through enhanced \(\eta\) and \(\phi\) resolution. However, with the current reconstruction method, sufficient resolution has not been achieved, resulting in the inability to observe the peaks of \(\omega\) and \(\phi\) in the dimuon invariant mass distribution at low transverse momentum. This can likely be attributed to issues in matching tracks from the newly introduced MFT and those from the MCH, which prevent achieving adequate resolution. This chapter presents an analysis to improve the MFT-MCH matching purity across all transverse momentum distributions without restricting to low \(p_T\).
+
+        The mass distribution of dimuons with \( p_{T\mu\mu} \) below 1 \( \mathrm{GeV}/c^2 \), which is not shown in Figure \ref{Analysis:Dimuon:CB:CB_pt_separation}, is presented here. From Figure \ref{Analysis:Dimuon:pt0to1}, the peak structures of \(\omega\) and \(\phi\) are not observed. This is due to the insufficient reconstruction resolution of \(\eta\), \( p_T \), and \(\phi\) at low \( p_T \) for single muons. The installation of the MFT is expected to enable high-precision measurements of \(\eta\) and \(\phi\), thereby improving the reconstruction resolution of \( p_T \) through enhanced \(\eta\) and \(\phi\) resolution. However, with the current reconstruction method, sufficient resolution has not been achieved, preventing the observation of the \(\omega\) and \(\phi\) peaks in the dimuon invariant mass distribution at low transverse momentum. This is likely due to challenges in matching tracks between the newly introduced MFT and the MCH, which hinder achieving adequate resolution. This chapter presents an analysis aimed at improving the MFT-MCH matching purity across all transverse momentum distributions, rather than restricting the focus to low \( p_T \).
+
 
         \subsubsection{MFT-MCH matching $\chi^2$ optimization}
         \label{matching_chi2_opt}
-            Using the yield analysis method for $\omega \rightarrow \mu\mu$ and $\phi \rightarrow \mu\mu$ described in \ref{Analysis:Dimuon:Combinatorial BG subtraction}-\ref{Analysis:Dimuon:Yieldcal}, the MFT-MCH matching \(\chi^2\) cut value for single muon tracks was optimised to maximise signal detection efficiency. The MFT-MCH matching \(\chi^2\) value represents the parameter difference when extrapolating MFT and MCH tracks to the matching plane. A larger \(\chi^2\) value indicates more fake matches, whereas a smaller value corresponds to more correct matches. Fake match tracks can be removed by applying a cut on this value. However, optimising the cut to minimise fake matches while preserving as many correct matches as possible is necessary. In this study, the optimisation was performed by maximising the signal significance using the peaks of \(\omega\) and \(\phi\).
-            The signal was calculated by performing the same analysis as in \ref{Analysis:Dimuon:Combinatorial BG subtraction}, \ref{Peak_extraction}, and \ref{Analysis:Dimuon:Yieldcal} for the mass distributions in all transverse momentum regions. The number of background events was determined by counting the entries in the background-subtracted mass distribution within the same mass window used for signal calculation, and this was used as the background estimate. The significance, \( S/\sqrt{S+BG} \), was then calculated. This calculation was performed for mass distributions reconstructed using only muons with an MFT-MCH matching \(\chi^2\) below a given threshold.  
-            Figure \ref{Analysis:Dimuon:Matching_CB} presents the results of the combinatorial background subtraction after applying the \(\chi^2\) cut. Similar to Figure \ref{Analysis:Dimuon:CB:CB_pt_separation}, the black histogram represents the mass distribution reconstructed from all oppositely charged muon pairs in the same event. The blue histogram represents the combinatorial background estimated using the Like Sign method. The red histogram corresponds to the background-subtracted distribution, representing the invariant mass distribution of correlated dimuons.
+            Using the yield analysis method for $\omega \rightarrow \mu\mu$ and $\phi \rightarrow \mu\mu$ described in \ref{Analysis:Dimuon:Combinatorial BG subtraction}-\ref{Analysis:Dimuon:Yieldcal}, the MFT-MCH matching \(\chi^2\) cut value for single muon tracks was optimised to maximise signal detection efficiency. The MFT-MCH matching \(\chi^2\) value represents the parameter difference when extrapolating MFT and MCH tracks to the matching plane. A larger \(\chi^2\) value indicates more fake matches, whereas a smaller value corresponds to more correct matches. Fake match tracks can be removed by applying a cut on this value. However, optimising the cut to minimise fake matches while preserving as many correct matches as possible is necessary. In this study, the optimisation was performed by maximising the signal significance using the peaks of \(\omega \rightarrow \mu\mu\) and \(\phi \rightarrow \mu\mu\). The signal was calculated by performing the same analysis as in \ref{Analysis:Dimuon:Combinatorial BG subtraction}, \ref{Peak_extraction}, and \ref{Analysis:Dimuon:Yieldcal} for the mass distributions in all transverse momentum regions. The number of background was determined by counting the entries in the background-subtracted mass distribution within the same mass window used for signal calculation, and this was used as the background estimate. The significance, \( S/\sqrt{S+BG} \), was then calculated. This calculation was performed for mass distributions reconstructed using only muons with an MFT-MCH matching \(\chi^2\) below a given threshold. Figure \ref{Analysis:Dimuon:Matching_CB} presents the results of the combinatorial background subtraction after applying the \(\chi^2\) cut. Similar to Figure \ref{Analysis:Dimuon:CB:CB_pt_separation}, the black histogram represents the mass distribution reconstructed from all oppositely charged muon pairs in the same event. The blue histogram represents the combinatorial background estimated using the Like-Sign method. The red histogram corresponds to the background-subtracted distribution, representing the invariant mass distribution of correlated dimuons.
             \begin{figure}[H]
                 \centering
                 \begin{minipage}{0.45\textwidth}
@@ -391,12 +384,12 @@
                     \includegraphics[width=\textwidth]{fig/3_4_4_Fit_chi2_200.pdf}
                     \caption*{MFT-MCH matching $\chi^2 < 200$}
                 \end{minipage}
-                \caption{Results of fitting to the correlated invariant mass distribution obtained from Figure \ref{Analysis:Dimuon:Matching_CB} in the region $0.5 < M_{\mu\mu} < 1.3 (\mathrm{GeV/c^2})$. The red line results from the global fit with (\ref{fit:globalfit}).}
+                \caption{Results of fitting to the correlated invariant mass distribution obtained from Figure \ref{Analysis:Dimuon:Matching_CB} in the region $0.5 < M_{\mu\mu} < 1.3 \mathrm{GeV/}c^2$. The red line results from the global fit with (\ref{fit:globalfit}).}
                 \label{Analysis:Dimuon:Matching_Fit}
             \end{figure}
             %need addition
             Figure \ref{fig:omega_significance} and Figure \ref{fig:phi_significance} show the $\chi^2$ dependence of \(S/\sqrt{S+BG}\) obtained in the fit.
-            The horizontal axis represents the matching \(\chi^2\), while the vertical axis shows \(S/\sqrt{S+BG}\). As the cut value is reduced, the value of \(S/\sqrt{S+BG}\) increases. When a cut of \(\chi^2<30\) is applied, \(S/\sqrt{S+BG}\) reaches its maximum for both \(\omega\) and \(\phi\).\@ From this result, it is evident that the optimal matching \(\chi^2\) value is \(\chi^2<30\).\@
+            The horizontal axis represents the matching \(\chi^2\), while the vertical axis shows \(S/\sqrt{S+BG}\). As the cut value is reduced, the value of \(S/\sqrt{S+BG}\) increases. When a cut of \(\chi^2 < 30\) is applied, \(S/\sqrt{S+BG}\) reaches its maximum for both \(\omega\) and \(\phi\).\@ From this result, it is evident that the optimal matching \(\chi^2\) value is \(\chi^2 < 30\).\@
             \begin{figure}[htbp]
                 \centering
                 % Left figure
@@ -418,7 +411,7 @@
 
         \subsubsection{Fake match track removal analysis of Global Track using MFT Track $\eta$ - MCH Track $\eta$}
         \label{Analysis:Matching}
-            The \(\eta\) distribution of Global Tracks differs significantly from the true distribution. This discrepancy arises due to muon reconstruction involving the MFT, indicating issues with MFT-MCH matching. Fake matches contribute to this significantly distorted \(\eta\) distribution. By removing these distortions, it is shown that the resolution of \(\eta\), \(p_T\), and \(\phi\) for single muons improves. In this analysis, Fake matches are removed by utilising the difference in \(\eta\) between the MFT Track and MCH Track that constitute the Global Track. The dataset used is LHC24b1, which consists of Monte Carlo data of \(pp\) collisions at \(\sqrt{s} = 13.6\) TeV from minimum-bias events. This simulation data has been compared with real data, confirming that they exhibit the same behaviour. %\ref{Appendix:compair_Real_and_MC}
+            The \(\eta\) distribution of Global Tracks differs significantly from the true distribution. This discrepancy arises due to muon reconstruction involving the MFT, indicating issues with MFT-MCH matching. Fake matches contribute to this significantly distorted \(\eta\) distribution. By removing these distortions, it is shown that the resolution of \(\eta\), \(p_T\), and \(\phi\) for single muons improves. In this analysis, Fake matches are removed by utilising the difference in \(\eta\) between the MFT Track and MCH Track that constitute the Global Track. The dataset used is LHC24b1, which consists of Monte Carlo data of proton-proton collisions at \(\sqrt{s} = 13.6\) TeV from minimum-bias events. This simulation data has been compared with real data, confirming that they exhibit the same behaviour. %\ref{Appendix:compair_Real_and_MC}
             \begin{figure}[H]
                 \centering
                 \includegraphics[keepaspectratio, scale=0.5]{fig/3_5_6_etacutno_eta.pdf}
@@ -527,4 +520,4 @@
                     \label{EffPuri_of_eta}
                 \end{minipage}
             \end{figure}
-            The \( |\Delta \eta| < 0.2 \) cut was applied in such a way as to discard as few correct match tracks as possible while removing fake match tracks. For the \( p_T \) distribution, the efficiency drops below 2 GeV, but the matching purity improves. The product of efficiency \(\times\) purity remains unchanged compared to before the cut. This indicates that the cut does not significantly remove correct matches. For the \(\eta\) distribution, efficiency is reduced in the range \( -3.6 < \eta < -3 \), but matching purity improves in the range \( -4 < \eta < -2 \). Similarly, the product of efficiency \(\times\) purity for \(\eta\) also remains unchanged compared to before the cut.
+            The \( |\Delta \eta| < 0.2 \) cut was applied in such a way as to discard as few correct match tracks as possible while removing fake match tracks. For the \( p_T \) distribution, the efficiency drops below 2 $(\mathrm{GeV}/c)$, but the matching purity improves. The product of efficiency and purity remains unchanged compared to before the cut. This indicates that the cut does not significantly remove correct matches. For the \(\eta\) distribution, efficiency is reduced in the range \( -3.6 < \eta < -3 \), but matching purity improves in the range \( -4 < \eta < -2 \). Similarly, the product of efficiency and purity for \(\eta\) also remains unchanged compared to before the cut.
